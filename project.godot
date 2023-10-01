@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="MysteryRPG"
-run/main_scene="res://Main Menu/main_menu.tscn"
+run/main_scene="res://src/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://src/main_menu/icon.svg"
 
 [dotnet]
 
