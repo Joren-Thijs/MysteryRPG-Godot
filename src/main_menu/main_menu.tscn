@@ -1,9 +1,74 @@
-[gd_scene load_steps=2 format=3 uid="uid://daxll7yk8yo7i"]
+[gd_scene load_steps=4 format=3 uid="uid://daxll7yk8yo7i"]
 
-[ext_resource type="Texture2D" uid="uid://fjaimnhy3vmr" path="res://src/main_menu/icon.svg" id="1_khm32"]
+[ext_resource type="Script" path="res://src/main_menu/main_menu.cs" id="1_b6peh"]
+[ext_resource type="AudioStream" uid="uid://bpcm0x2qsj3qu" path="res://Artwork/Sound/Mainmenusong.mp3" id="2_f5cxa"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_u230l"]
+script/source = "using Godot;
+using System;
+
+public partial class Background : Panel
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
 
 [node name="Main Menu" type="Node2D"]
+script = ExtResource("1_b6peh")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(157, 131)
-texture = ExtResource("1_khm32")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Panel" parent="CanvasLayer"]
+offset_right = 1151.0
+offset_bottom = 649.0
+script = SubResource("CSharpScript_u230l")
+
+[node name="Game Title" type="RichTextLabel" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 72.0
+offset_right = 859.0
+offset_bottom = 192.0
+theme_override_font_sizes/italics_font_size = 80
+bbcode_enabled = true
+text = "[center][i]Mystery RPG[/i][/center]"
+scroll_active = false
+
+[node name="New Game" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 259.0
+offset_right = 737.0
+offset_bottom = 317.0
+text = "New Game"
+
+[node name="Load Game" type="Button" parent="CanvasLayer/Background"]
+offset_left = 434.0
+offset_top = 349.0
+offset_right = 740.0
+offset_bottom = 407.0
+text = "Load Game"
+
+[node name="Controls" type="Button" parent="CanvasLayer/Background"]
+offset_left = 436.0
+offset_top = 443.0
+offset_right = 742.0
+offset_bottom = 501.0
+text = "Controls"
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_f5cxa")
+volume_db = -2.0
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/Background/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/Background/Load Game" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/Background/Controls" to="." method="_on_controls_pressed"]
