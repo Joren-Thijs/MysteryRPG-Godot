@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://d05lq7ob1gga6"]
+[gd_scene load_steps=9 format=4 uid="uid://d05lq7ob1gga6"]
 
 [ext_resource type="PackedScene" uid="uid://ymxp2tb5roub" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://c88a73o3nkaqo" path="res://sprites/Tiles/tiles3.png" id="2_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://dd3wqhbvconjs" path="res://sprites/GameObjects/trees.png" id="3_3dryh"]
+[ext_resource type="PackedScene" uid="uid://clabecr8v10t4" path="res://Scenes/jeffrey.tscn" id="4_3dryh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wowpa"]
 texture = ExtResource("2_wrm1d")
@@ -1084,3 +1085,6 @@ position = Vector2(-1, -2)
 
 [node name="Camera2D" type="Camera2D" parent="Y-sort/Player"]
 zoom = Vector2(2.5, 2.5)
+
+[node name="Jeffrey" parent="Y-sort" instance=ExtResource("4_3dryh")]
+position = Vector2(165, -71)

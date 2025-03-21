@@ -140,3 +140,6 @@ offset = Vector2(0, -9)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
 shape = SubResource("CircleShape2D_cvnsp")
+
+[node name="RayCast" type="RayCast2D" parent="."]
+target_position = Vector2(20, 0)
