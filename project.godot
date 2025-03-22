@@ -15,6 +15,12 @@ run/main_scene="uid://d05lq7ob1gga6"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogManager="*res://globals/dialog_manager.gd"
+MusicManager="*res://globals/music_manager.tscn"
+Music="*res://globals/music.gd"
+
 [input]
 
 move_up={

@@ -44,6 +44,7 @@ func get_movement() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") && ray_cast.is_colliding():
 		var body = ray_cast.get_collider()
+		print(body)
 		if body is Character:
 			body.interact()
 			

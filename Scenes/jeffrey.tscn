@@ -132,7 +132,7 @@ script = ExtResource("1_psvr6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3arx0")
 animation = &"walk_down"
-frame_progress = 0.969173
+frame_progress = 0.722218
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)

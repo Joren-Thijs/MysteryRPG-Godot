@@ -2,8 +2,8 @@ class_name Character
 
 extends CharacterBody2D
 
-func interact():
+func interact() -> void:
 	talk()
 
-func talk():
-	print("hello player")
+func talk() -> void:
+	pass
