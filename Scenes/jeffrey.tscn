@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://clabecr8v10t4"]
+[gd_scene load_steps=18 format=3 uid="uid://clabecr8v10t4"]
 
 [ext_resource type="Texture2D" uid="uid://daj5w1ad7ql0b" path="res://sprites/GameCharacters/characters2.png" id="1_bg3ls"]
 [ext_resource type="Script" uid="uid://b0mrn38ip334k" path="res://scripts/jeffrey.gd" id="1_psvr6"]
+[ext_resource type="PackedScene" uid="uid://de6rbvgp0mqbw" path="res://Scenes/character_navigation_agent.tscn" id="3_ax7n4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_psvr6"]
 atlas = ExtResource("1_bg3ls")
@@ -138,13 +139,4 @@ frame_progress = 0.722218
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_psvr6")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 16.0
-target_desired_distance = 23.0
-path_max_distance = 150.0
-path_postprocessing = 1
-simplify_path = true
-
-[node name="NavigationPathRefresh" type="Timer" parent="NavigationAgent2D"]
-one_shot = true
-autostart = true
+[node name="CharacterNavigationAgent" parent="." instance=ExtResource("3_ax7n4")]
