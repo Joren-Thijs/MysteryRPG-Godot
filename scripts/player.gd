@@ -4,7 +4,7 @@ const BASE_SPEED = 3000.0
 const SPRINT_SPEED = 5500
 const RAY_CAST_SIZE = 20
 var speed = 0
-var direction: Vector2 = Vector2(0,0)
+var direction: Vector2 = Vector2.ZERO
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast
@@ -38,7 +38,7 @@ func get_movement() -> void:
 		animated_sprite.play("walk_right")
 		ray_cast.target_position = Vector2(RAY_CAST_SIZE, 0)
 	else:
-		direction = Vector2(0,0)
+		direction = Vector2.ZERO
 		animated_sprite.stop()
 		
 func _input(event: InputEvent) -> void:

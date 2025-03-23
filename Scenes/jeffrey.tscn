@@ -139,13 +139,16 @@ position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_b4ixc")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 10.0
-target_desired_distance = 5.0
+path_desired_distance = 16.0
+target_desired_distance = 23.0
+path_max_distance = 150.0
 path_postprocessing = 1
+simplify_path = true
 debug_enabled = true
 
 [node name="NavigationPathRefresh" type="Timer" parent="NavigationAgent2D"]
 one_shot = true
 autostart = true
 
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
 [connection signal="timeout" from="NavigationAgent2D/NavigationPathRefresh" to="." method="_on_navigation_path_refresh_timeout"]

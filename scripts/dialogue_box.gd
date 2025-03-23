@@ -17,7 +17,7 @@ func display_dialogue(dialogue: String):
 	display.text = dialogue
 	
 func _input(event: InputEvent) -> void:
-	if isDisplyingText and Input.is_action_pressed("ui_accept"):
+	if isDisplyingText and event.is_action_pressed("ui_accept"):
 		end_dialogue()	
 	
 func end_dialogue() -> void:
