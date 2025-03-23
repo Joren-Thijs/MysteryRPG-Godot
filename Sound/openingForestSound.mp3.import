@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bcuhcm60v0ova"
-path="res://.godot/imported/openingForestSound.mp3-669e454845191257f51e128982bd058c.mp3str"
+path="res://.godot/imported/openingForestSound.mp3-8980bdd2430bafd34208b1d94b4c341d.mp3str"
 
 [deps]
 
-source_file="res://Sound/openingForestSound.mp3"
-dest_files=["res://.godot/imported/openingForestSound.mp3-669e454845191257f51e128982bd058c.mp3str"]
+source_file="res://sound/openingForestSound.mp3"
+dest_files=["res://.godot/imported/openingForestSound.mp3-8980bdd2430bafd34208b1d94b4c341d.mp3str"]
 
 [params]
 

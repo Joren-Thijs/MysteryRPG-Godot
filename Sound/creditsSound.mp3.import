@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d2rsre0t4e7gj"
-path="res://.godot/imported/creditsSound.mp3-33637b2f94aa5ae461531e715ee0ffc1.mp3str"
+path="res://.godot/imported/creditsSound.mp3-db2fb2728fdfe3d3e431e6ebb87051db.mp3str"
 
 [deps]
 
-source_file="res://Sound/creditsSound.mp3"
-dest_files=["res://.godot/imported/creditsSound.mp3-33637b2f94aa5ae461531e715ee0ffc1.mp3str"]
+source_file="res://sound/creditsSound.mp3"
+dest_files=["res://.godot/imported/creditsSound.mp3-db2fb2728fdfe3d3e431e6ebb87051db.mp3str"]
 
 [params]
 
