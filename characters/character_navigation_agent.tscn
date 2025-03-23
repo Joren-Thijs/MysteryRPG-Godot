@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://de6rbvgp0mqbw"]
 
-[ext_resource type="Script" uid="uid://biswn46gbbijm" path="res://scripts/character_navigation_agent.gd" id="1_q3xfc"]
+[ext_resource type="Script" uid="uid://biswn46gbbijm" path="res://characters/character_navigation_agent.gd" id="1_q3xfc"]
 
 [node name="CharacterNavigationAgent" type="NavigationAgent2D"]
 path_desired_distance = 16.0
@@ -8,5 +8,4 @@ target_desired_distance = 23.0
 path_max_distance = 150.0
 path_postprocessing = 1
 simplify_path = true
-debug_enabled = true
 script = ExtResource("1_q3xfc")
