@@ -5,6 +5,7 @@ extends CharacterBody2D
 var direction: Vector2 = Vector2.ZERO
 
 @export var navigation_target: Node2D
+		
 @onready var character_navigation_agent: NavigationAgent2D = $CharacterNavigationAgent
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -28,6 +29,10 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = direction * movement_speed * delta
 	move_and_slide()
+
+func update_navigation_target(target: Node2D):
+	navigation_target = target
+	character_navigation_agent.navigation_target = navigation_target
 
 func interact() -> void:
 	talk()

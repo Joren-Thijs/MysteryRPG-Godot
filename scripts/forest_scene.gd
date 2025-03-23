@@ -7,7 +7,7 @@ func _ready() -> void:
 	MusicManager.play_music.emit(Music.Songs.FOREST_SCENE)
 	
 func walk_away_jeffrey() -> void:
-	jeffrey.set_navigation_target(walk_away_target)
+	jeffrey.update_navigation_target(walk_away_target)
 
 func _on_jeffrey_player_invited() -> void:
 	print("player invited")

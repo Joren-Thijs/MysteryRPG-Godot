@@ -21,7 +21,6 @@ func setup_timer():
 	navigation_path_refresh_timer.start(1)
 
 func setup_navigation() -> void:
-	navigation_finished.connect(on_navigation_agent_navigation_finished)
 	navigation_path_refresh_timer.timeout.connect(on_navigation_path_refresh_timeout)
 	if is_navigating:
 		target_position = navigation_target.global_position
@@ -45,9 +44,6 @@ func get_movement() -> void:
 	if !is_target_reachable():
 		print("target isnt reachable")
 		character.direction = Vector2.ZERO
-
-func on_navigation_agent_navigation_finished() -> void:
-	pass
 
 func on_navigation_path_refresh_timeout() -> void:
 	print("navigation timeout")
