@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://clabecr8v10t4"]
 
-[ext_resource type="Texture2D" uid="uid://daj5w1ad7ql0b" path="res://sprites/GameCharacters/characters2.png" id="1_bg3ls"]
+[ext_resource type="Texture2D" uid="uid://daj5w1ad7ql0b" path="res://characters/sprites/characters2.png" id="1_bg3ls"]
 [ext_resource type="Script" uid="uid://b0mrn38ip334k" path="res://scripts/jeffrey.gd" id="1_psvr6"]
-[ext_resource type="PackedScene" uid="uid://de6rbvgp0mqbw" path="res://Scenes/character_navigation_agent.tscn" id="3_ax7n4"]
+[ext_resource type="PackedScene" uid="uid://de6rbvgp0mqbw" path="res://characters/character_navigation_agent.tscn" id="3_ax7n4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_psvr6"]
 atlas = ExtResource("1_bg3ls")
@@ -132,8 +132,7 @@ script = ExtResource("1_psvr6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_3arx0")
-animation = &"walk_down"
-frame_progress = 0.722218
+animation = &"walk_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
