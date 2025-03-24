@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://blorww5aw80pk"
+path="res://.godot/imported/invitation.dialogue-661cef4eaae7f37778abdc9234bffa5a.tres"
+
+[deps]
+
+source_file="res://characters/jeffrey/invitation.dialogue"
+dest_files=["res://.godot/imported/invitation.dialogue-661cef4eaae7f37778abdc9234bffa5a.tres"]
+
+[params]
+
+defaults=true

@@ -3,9 +3,9 @@ class_name Jeffrey
 extends Character
 
 signal player_invited()
-
+const dialogue = preload("res://characters/jeffrey/invitation.dialogue")
 func talk():
-	DialogManager.display_dialogue.emit("Hello Sam!")
+	DialogueManager.show_dialogue_balloon(dialogue, "start")
 
 func _on_navigation_agent_navigation_finished() -> void:
 	talk()
