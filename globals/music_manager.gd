@@ -2,8 +2,8 @@ extends Node
 
 @onready var music_player: AudioStreamPlayer2D = $MusicPlayer
 
-const MAINMENUSONG = preload("res://Sound/Mainmenusong.mp3")
-const OPENING_FOREST_SOUND = preload("res://Sound/openingForestSound.mp3")
+const MAINMENUSONG = preload("res://sound/Mainmenusong.mp3")
+const OPENING_FOREST_SOUND = preload("res://sound/openingForestSound.mp3")
 
 signal play_music(music: Music.Songs)
 
