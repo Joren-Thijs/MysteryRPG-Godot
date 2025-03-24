@@ -21,14 +21,13 @@ func setup_timer():
 	navigation_path_refresh_timer.start(1)
 
 func setup_navigation() -> void:
-	navigation_path_refresh_timer.timeout.connect(on_navigation_path_refresh_timeout)
 	if is_navigating:
 		target_position = navigation_target.global_position
 
 func set_navigation_target(node: Node2D) -> void:
 	navigation_target = node
 	
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	get_movement()
 
 func get_movement() -> void:

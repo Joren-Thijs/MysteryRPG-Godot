@@ -1163,7 +1163,7 @@ zoom = Vector2(2.5, 2.5)
 
 [node name="Jeffrey" parent="Y-sort" node_paths=PackedStringArray("navigation_target") instance=ExtResource("6_t2j6k")]
 unique_name_in_owner = true
-position = Vector2(-105, 5)
+position = Vector2(177, -22)
 navigation_target = NodePath("../Player")
 
 [node name="Walk away target" type="Node2D" parent="Y-sort"]
