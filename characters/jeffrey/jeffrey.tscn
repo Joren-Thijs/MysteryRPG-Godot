@@ -139,5 +139,3 @@ position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_psvr6")
 
 [node name="CharacterNavigationAgent" parent="." instance=ExtResource("3_ax7n4")]
-
-[connection signal="navigation_finished" from="CharacterNavigationAgent" to="." method="_on_navigation_agent_navigation_finished"]

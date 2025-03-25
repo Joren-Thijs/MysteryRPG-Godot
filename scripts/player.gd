@@ -1,3 +1,5 @@
+class_name Player
+
 extends CharacterBody2D
 
 const BASE_SPEED = 3000.0
@@ -5,9 +7,14 @@ const SPRINT_SPEED = 5500
 const RAY_CAST_SIZE = 20
 var speed = 0
 var direction: Vector2 = Vector2.ZERO
+var is_talking := false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast
+
+func _ready() -> void:
+	DialogueManager.dialogue_started.connect(on_dialogue_started)
+	DialogueManager.dialogue_ended.connect(on_dialogue_ended)
 
 func _physics_process(delta: float) -> void:
 	get_movement()
@@ -15,6 +22,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func get_movement() -> void:
+	if is_talking:
+		direction = Vector2.ZERO
+		animated_sprite.stop()
+		return
 	
 	if Input.is_action_pressed("sprint"):
 		speed = SPRINT_SPEED
@@ -48,3 +59,10 @@ func _input(event: InputEvent) -> void:
 		if body is Character:
 			body.interact()
 			
+func on_dialogue_started() -> void:
+	print("Dialogue started")
+	is_talking = true
+
+func on_dialogue_ended() -> void:
+	print("Dialogue ended")
+	is_talking = false

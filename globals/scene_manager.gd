@@ -12,7 +12,7 @@ var current_scene: Node = null
 
 func _ready():
 	# Load the main menu scene when the game starts
-	load_new_scene(Chapter.MAIN_MENU)
+	load_new_scene(Chapter.FOREST_SCENE)
 
 func load_new_scene(chapter: Chapter):
 	match chapter:

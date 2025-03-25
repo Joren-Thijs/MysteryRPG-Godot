@@ -1,9 +1,10 @@
-[gd_scene load_steps=31 format=4 uid="uid://d05lq7ob1gga6"]
+[gd_scene load_steps=32 format=4 uid="uid://d05lq7ob1gga6"]
 
 [ext_resource type="Script" uid="uid://breb1tgehje6i" path="res://scripts/forest_scene.gd" id="1_lak1s"]
 [ext_resource type="Texture2D" uid="uid://c88a73o3nkaqo" path="res://sprites/Tiles/tiles3.png" id="2_e7tvg"]
 [ext_resource type="Texture2D" uid="uid://dd3wqhbvconjs" path="res://sprites/GameObjects/trees.png" id="3_7agd8"]
 [ext_resource type="PackedScene" uid="uid://ymxp2tb5roub" path="res://scenes/player.tscn" id="4_8foox"]
+[ext_resource type="Resource" uid="uid://blorww5aw80pk" path="res://characters/jeffrey/invitation.dialogue" id="6_nsc44"]
 [ext_resource type="PackedScene" uid="uid://clabecr8v10t4" path="res://characters/jeffrey/jeffrey.tscn" id="6_t2j6k"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lak1s"]
@@ -1164,6 +1165,7 @@ zoom = Vector2(2.5, 2.5)
 [node name="Jeffrey" parent="Y-sort" node_paths=PackedStringArray("navigation_target") instance=ExtResource("6_t2j6k")]
 unique_name_in_owner = true
 position = Vector2(177, -22)
+initial_dialogue = ExtResource("6_nsc44")
 navigation_target = NodePath("../Player")
 
 [node name="Walk away target" type="Node2D" parent="Y-sort"]

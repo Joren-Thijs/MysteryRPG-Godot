@@ -1,8 +1,12 @@
 ~ start
-Jeffrey: [[Hi|Hello|Hey]] Sam!
-Jeffrey: I have an invitation for you!
-Sam: An invitation? From Who?
-Jeffrey: Lord Fissher off course.
-Jeffrey: Here you go.
-Jeffrey: Gotta go!
+Stranger: [[Hi|Hello|Hey]] Sam,
+Stranger: I have a message for you!
+- A message? from who?
+	Messenger: From Lord Fisher!
+- Read it to me please.
+Messenger: Uhum, Lord Fisher would like to invite you and your fellow townsmen to a special dinner at Villa Fisher,
+Messenger: hosted by the gracefull Lord and his lovely wife Lady Fisher.
+Messenger: You will be expected at 8 pm!
+Messenger: Thats all, Gotta go!
+do walk_away_jeffrey()
 => END
