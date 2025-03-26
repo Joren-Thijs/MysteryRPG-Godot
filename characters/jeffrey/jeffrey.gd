@@ -9,4 +9,5 @@ func _ready() -> void:
 	set_navigation_target(navigation_target, talk)
 
 func talk():
-	DialogueManager.show_dialogue_balloon(current_dialogue, "start")
+	if current_dialogue != null:
+		DialogueManager.show_dialogue_balloon(current_dialogue, "start")

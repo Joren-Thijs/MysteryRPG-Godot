@@ -28,9 +28,7 @@ func setup_navigation() -> void:
 		target_position = navigation_target.global_position
 
 func set_navigation_target(node: Node2D = null, callback: Callable = Callable()) -> void:
-	print("set nav target ", node)
 	navigation_target = node
-	print("set nav callback ", callback)
 	navigation_finished_callback = callback
 	
 func _physics_process(_delta: float) -> void:
@@ -56,6 +54,4 @@ func on_navigation_path_refresh_timeout() -> void:
 func on_navigation_finished() -> void:
 	if navigation_finished_callback.is_valid():
 		navigation_finished_callback.call()
-	else:
-		print("callback is invalid")
 	set_navigation_target()
