@@ -4,6 +4,7 @@ extends Node
 
 const MAINMENUSONG = preload("res://sound/Mainmenusong.mp3")
 const OPENING_FOREST_SOUND = preload("res://sound/openingForestSound.mp3")
+const TOAST_SCENE_SOUND = preload("res://sound/toastSceneSound.mp3")
 
 signal play_music(music: Music.Songs)
 
@@ -18,6 +19,8 @@ func play(music: Music.Songs):
 			musicToPlay = MAINMENUSONG
 		Music.Songs.FOREST_SCENE:
 			musicToPlay = OPENING_FOREST_SOUND
+		Music.Songs.TOAST_SCENE:
+			musicToPlay = TOAST_SCENE_SOUND
 		_:
 			return
 

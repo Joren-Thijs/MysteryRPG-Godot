@@ -1,18 +1,20 @@
 extends Node
 
 const MAIN_MENU = preload("res://scenes/MainMenu.tscn")
-const FOREST_SCENE = preload("res://scenes/forest_scene.tscn")
+const FOREST_SCENE = preload("res://scenes/forest/forest_scene.tscn")
+const TOAST_SCENE = preload("res://scenes/toast/toast_scene.tscn")
 
 enum Chapter {
 	MAIN_MENU,
 	FOREST_SCENE,
+	TOAST_SCENE
 }
 
 var current_scene: Node = null
 
 func _ready():
 	# Load the main menu scene when the game starts
-	load_new_scene(Chapter.FOREST_SCENE)
+	load_new_scene(Chapter.TOAST_SCENE)
 
 func load_new_scene(chapter: Chapter):
 	match chapter:
@@ -20,6 +22,8 @@ func load_new_scene(chapter: Chapter):
 			goto_scene(MAIN_MENU)
 		Chapter.FOREST_SCENE:
 			goto_scene(FOREST_SCENE)
+		Chapter.TOAST_SCENE:
+			goto_scene(TOAST_SCENE)
 
 func goto_scene(scene: PackedScene):
 	# Use call_deferred to defer the scene transition to the next frame.

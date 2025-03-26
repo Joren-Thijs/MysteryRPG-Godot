@@ -59,10 +59,8 @@ func _input(event: InputEvent) -> void:
 		if body is Character:
 			body.interact()
 			
-func on_dialogue_started() -> void:
-	print("Dialogue started")
+func on_dialogue_started(resource: DialogueResource) -> void:
 	is_talking = true
 
-func on_dialogue_ended() -> void:
-	print("Dialogue ended")
+func on_dialogue_ended(resource: DialogueResource) -> void:
 	is_talking = false

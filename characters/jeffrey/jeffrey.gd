@@ -10,4 +10,3 @@ func _ready() -> void:
 
 func talk():
 	DialogueManager.show_dialogue_balloon(current_dialogue, "start")
-	
