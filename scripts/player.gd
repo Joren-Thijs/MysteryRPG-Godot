@@ -58,6 +58,8 @@ func _input(event: InputEvent) -> void:
 		print(body)
 		if body is Character:
 			body.interact()
+		if body is GameObject:
+			body.interact()
 			
 func on_dialogue_started(resource: DialogueResource) -> void:
 	is_talking = true

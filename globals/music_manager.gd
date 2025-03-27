@@ -8,10 +8,16 @@ const TOAST_SCENE_SOUND = preload("res://sound/toastSceneSound.mp3")
 
 signal play_music(music: Music.Songs)
 
+var current_music: Music.Songs
+
 func _ready() -> void:
 	play_music.connect(play)
 
 func play(music: Music.Songs):
+	
+	if music == current_music:
+		return
+	
 	var musicToPlay: Resource
 	
 	match music:
@@ -23,6 +29,7 @@ func play(music: Music.Songs):
 			musicToPlay = TOAST_SCENE_SOUND
 		_:
 			return
-
+	
+	current_music = music
 	music_player.stream = musicToPlay
 	music_player.play()
