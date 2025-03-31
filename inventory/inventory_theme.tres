@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cdlmeu2nbgr5w"]
+
+[ext_resource type="FontFile" uid="uid://bgm651kvi1rny" path="res://fonts/dogicapixel.ttf" id="1_2gwwn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gwwn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwupv"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = ExtResource("1_2gwwn")
+default_font_size = 8
+ItemList/colors/font_color = Color(0.408329, 0.408329, 0.408329, 1)
+ItemList/colors/font_hovered_color = Color(0.151275, 0.151276, 0.151276, 1)
+ItemList/constants/v_separation = 16
+ItemList/styles/panel = SubResource("StyleBoxFlat_2gwwn")
+Panel/styles/panel = SubResource("StyleBoxFlat_lwupv")

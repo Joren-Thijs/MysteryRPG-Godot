@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bhcjkwrjy34mb"]
+[gd_scene load_steps=11 format=4 uid="uid://bhcjkwrjy34mb"]
 
 [ext_resource type="Script" uid="uid://b1j7obmsex4oa" path="res://scenes/toast/toast_scene.gd" id="1_y0ep0"]
 [ext_resource type="Texture2D" uid="uid://bj1xtxyhgqlti" path="res://sprites/Tiles/Tiles1.png" id="2_8rpot"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ymxp2tb5roub" path="res://scenes/player.tscn" id="4_3w7yf"]
 [ext_resource type="PackedScene" uid="uid://c5727c15ji861" path="res://game_objects/cabinet/cabinet.tscn" id="6_8neva"]
 [ext_resource type="PackedScene" uid="uid://btnse7caomuuy" path="res://game_objects/door/door.tscn" id="6_8rpot"]
+[ext_resource type="PackedScene" uid="uid://bwpqmcid0feln" path="res://game_objects/book_case/book_case.tscn" id="7_8neva"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bx4"]
 texture = ExtResource("2_8rpot")
@@ -1864,7 +1865,7 @@ y_sort_enabled = true
 [node name="Player" parent="Y-sort" instance=ExtResource("4_3w7yf")]
 unique_name_in_owner = true
 y_sort_enabled = false
-position = Vector2(389, 83)
+position = Vector2(30, 39)
 
 [node name="Camera2D" type="Camera2D" parent="Y-sort/Player"]
 z_index = 1
@@ -1873,5 +1874,34 @@ zoom = Vector2(2.5, 2.5)
 [node name="Door" parent="Y-sort" instance=ExtResource("6_8rpot")]
 position = Vector2(687, 304)
 
-[node name="Cabinet" parent="Y-sort" instance=ExtResource("6_8neva")]
+[node name="Dining hall" type="Node" parent="Y-sort"]
+
+[node name="Cabinet" parent="Y-sort/Dining hall" instance=ExtResource("6_8neva")]
 position = Vector2(354, 16)
+
+[node name="BookCase" parent="Y-sort/Dining hall" instance=ExtResource("7_8neva")]
+position = Vector2(386, 16)
+
+[node name="Middle room" type="Node" parent="Y-sort"]
+
+[node name="Cabinet2" parent="Y-sort/Middle room" instance=ExtResource("6_8neva")]
+position = Vector2(-83, 466)
+
+[node name="BookCase" parent="Y-sort/Middle room" instance=ExtResource("7_8neva")]
+position = Vector2(-51, 466)
+
+[node name="Bottom right room" type="Node" parent="Y-sort"]
+
+[node name="Cabinet3" parent="Y-sort/Bottom right room" instance=ExtResource("6_8neva")]
+position = Vector2(371, 997)
+
+[node name="BookCase" parent="Y-sort/Bottom right room" instance=ExtResource("7_8neva")]
+position = Vector2(403, 997)
+
+[node name="Bottom left room2" type="Node" parent="Y-sort"]
+
+[node name="Cabinet3" parent="Y-sort/Bottom left room2" instance=ExtResource("6_8neva")]
+position = Vector2(-504, 977)
+
+[node name="BookCase" parent="Y-sort/Bottom left room2" instance=ExtResource("7_8neva")]
+position = Vector2(-472, 977)
