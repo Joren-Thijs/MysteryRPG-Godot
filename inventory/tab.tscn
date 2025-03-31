@@ -22,7 +22,9 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 theme = ExtResource("1_n0uou")
 script = ExtResource("2_dpi8o")
-hoverColor = Color(1, 1, 0.494118, 1)
+hoverColor = Color(0.939918, 0.937884, 0.938389, 1)
+selectedColor = Color(1, 1, 1, 1)
+unselectedColor = Color(0.807843, 0.807843, 0.807843, 1)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0

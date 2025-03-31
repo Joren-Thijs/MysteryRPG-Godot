@@ -4,6 +4,8 @@ var selected := false
 
 var hovered := false
 @export var hoverColor: Color
+@export var selectedColor: Color
+@export var unselectedColor: Color
 
 func _ready() -> void:
     focus_entered.connect(on_hover)
@@ -21,12 +23,12 @@ func set_color() -> void:
     if hovered:
         lighten()
     elif selected:
-        modulate = Color("ffffff")
+        modulate = selectedColor
     else:
         darken()
 
 func darken() -> void:
-    modulate = Color("cecece")
+    modulate = unselectedColor
 
 func on_hover() -> void:
     hovered = true
