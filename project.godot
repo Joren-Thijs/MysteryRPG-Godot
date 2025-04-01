@@ -22,6 +22,7 @@ Music="*res://globals/music.gd"
 MusicManager="*res://globals/music_manager.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 InventoryManager="*res://globals/inventory_manager.tscn"
+NotificationManager="*res://globals/notification_manager.tscn"
 
 [dialogue_manager]
 
