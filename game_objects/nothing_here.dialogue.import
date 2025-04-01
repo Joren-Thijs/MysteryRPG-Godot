@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://3sm6lsmfv5d6"
+path="res://.godot/imported/nothing_here.dialogue-15a3a8fb17c631b607a4e3aca8cc1f96.tres"
+
+[deps]
+
+source_file="res://game_objects/nothing_here.dialogue"
+dest_files=["res://.godot/imported/nothing_here.dialogue-15a3a8fb17c631b607a4e3aca8cc1f96.tres"]
+
+[params]
+
+defaults=true

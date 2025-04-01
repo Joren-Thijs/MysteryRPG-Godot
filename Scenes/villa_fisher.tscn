@@ -1865,7 +1865,7 @@ y_sort_enabled = true
 [node name="Player" parent="Y-sort" instance=ExtResource("4_3w7yf")]
 unique_name_in_owner = true
 y_sort_enabled = false
-position = Vector2(30, 39)
+position = Vector2(354, 67)
 
 [node name="Camera2D" type="Camera2D" parent="Y-sort/Player"]
 z_index = 1
@@ -1874,7 +1874,8 @@ zoom = Vector2(2.5, 2.5)
 [node name="Door" parent="Y-sort" instance=ExtResource("6_8rpot")]
 position = Vector2(687, 304)
 
-[node name="Dining hall" type="Node" parent="Y-sort"]
+[node name="Dining hall" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
 
 [node name="Cabinet" parent="Y-sort/Dining hall" instance=ExtResource("6_8neva")]
 position = Vector2(354, 16)
@@ -1882,7 +1883,8 @@ position = Vector2(354, 16)
 [node name="BookCase" parent="Y-sort/Dining hall" instance=ExtResource("7_8neva")]
 position = Vector2(386, 16)
 
-[node name="Middle room" type="Node" parent="Y-sort"]
+[node name="Middle room" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
 
 [node name="Cabinet2" parent="Y-sort/Middle room" instance=ExtResource("6_8neva")]
 position = Vector2(-83, 466)
@@ -1890,7 +1892,8 @@ position = Vector2(-83, 466)
 [node name="BookCase" parent="Y-sort/Middle room" instance=ExtResource("7_8neva")]
 position = Vector2(-51, 466)
 
-[node name="Bottom right room" type="Node" parent="Y-sort"]
+[node name="Bottom right room" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
 
 [node name="Cabinet3" parent="Y-sort/Bottom right room" instance=ExtResource("6_8neva")]
 position = Vector2(371, 997)
@@ -1898,7 +1901,8 @@ position = Vector2(371, 997)
 [node name="BookCase" parent="Y-sort/Bottom right room" instance=ExtResource("7_8neva")]
 position = Vector2(403, 997)
 
-[node name="Bottom left room2" type="Node" parent="Y-sort"]
+[node name="Bottom left room2" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
 
 [node name="Cabinet3" parent="Y-sort/Bottom left room2" instance=ExtResource("6_8neva")]
 position = Vector2(-504, 977)

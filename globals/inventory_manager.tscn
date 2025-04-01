@@ -1,29 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://bko0p24aqbi22"]
+[gd_scene load_steps=15 format=3 uid="uid://bko0p24aqbi22"]
 
 [ext_resource type="Theme" uid="uid://cdlmeu2nbgr5w" path="res://inventory/inventory_theme.tres" id="1_hwhfl"]
 [ext_resource type="Script" uid="uid://cjyuajvfhm1rr" path="res://globals/inventory_manager.gd" id="1_q5pxl"]
+[ext_resource type="Script" uid="uid://ceyulhcsxogsi" path="res://inventory/note.gd" id="3_3gi3w"]
 [ext_resource type="Texture2D" uid="uid://ce2eh4aexw6b1" path="res://inventory/sprites/notebook.png" id="3_hwhfl"]
+[ext_resource type="Script" uid="uid://dtd36pa4yp8g6" path="res://inventory/inventory_item.gd" id="3_saa21"]
 [ext_resource type="PackedScene" uid="uid://cdq67051bvi30" path="res://inventory/tab.tscn" id="4_ee8kr"]
+[ext_resource type="Resource" uid="uid://cqsm6hu7oql5i" path="res://inventory/notes/poisoned_wine.tres" id="4_p5x8t"]
+[ext_resource type="Resource" uid="uid://bcw0pmo0vmatc" path="res://inventory/notes/letter_to_sophie.tres" id="4_scm5w"]
 [ext_resource type="Texture2D" uid="uid://bsddn46lbs1r" path="res://inventory/sprites/fold.png" id="5_8537s"]
+[ext_resource type="Resource" uid="uid://sarlwrmudlfg" path="res://inventory/items/stick.tres" id="7_fkveu"]
+[ext_resource type="Resource" uid="uid://b8mlx1epidf4r" path="res://inventory/items/apple.tres" id="7_p5x8t"]
+[ext_resource type="Texture2D" uid="uid://bkuv14b4k6p60" path="res://inventory/sprites/apple-icon.png" id="10_e1ea8"]
+[ext_resource type="Texture2D" uid="uid://b8pukg0h32scf" path="res://inventory/sprites/stick-icon.png" id="12_fkveu"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkveu"]
+bg_color = Color(0, 0, 0, 0.517647)
 
-[node name="InventoryManager" type="Control" parent="."]
+[node name="InventoryManager" type="CanvasLayer"]
+script = ExtResource("1_q5pxl")
+notes = Array[ExtResource("3_3gi3w")]([ExtResource("4_scm5w"), ExtResource("4_p5x8t")])
+inventory = Array[ExtResource("3_saa21")]([ExtResource("7_p5x8t"), ExtResource("7_fkveu")])
+
+[node name="InventoryManagerControl" type="Control" parent="."]
 z_index = 5
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_hwhfl")
-script = ExtResource("1_q5pxl")
 
-[node name="NotebookBackground" type="NinePatchRect" parent="InventoryManager"]
+[node name="NotebookBackground" type="NinePatchRect" parent="InventoryManagerControl"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -43,7 +54,7 @@ patch_margin_top = 55
 patch_margin_right = 10
 patch_margin_bottom = 23
 
-[node name="Tabs" type="HBoxContainer" parent="InventoryManager/NotebookBackground"]
+[node name="Tabs" type="HBoxContainer" parent="InventoryManagerControl/NotebookBackground"]
 layout_mode = 0
 offset_left = 391.0
 offset_top = 39.0
@@ -51,32 +62,32 @@ offset_right = 537.0
 offset_bottom = 53.0
 theme_override_constants/separation = 4
 
-[node name="NotesTab" parent="InventoryManager/NotebookBackground/Tabs" instance=ExtResource("4_ee8kr")]
+[node name="NotesTab" parent="InventoryManagerControl/NotebookBackground/Tabs" instance=ExtResource("4_ee8kr")]
 modulate = Color(0.808998, 0.808998, 0.808998, 1)
 layout_mode = 2
 
-[node name="NinePatchRect" parent="InventoryManager/NotebookBackground/Tabs/NotesTab" index="0"]
+[node name="NinePatchRect" parent="InventoryManagerControl/NotebookBackground/Tabs/NotesTab" index="0"]
 offset_right = 51.0
 offset_bottom = 14.0
 
-[node name="Label" parent="InventoryManager/NotebookBackground/Tabs/NotesTab/NinePatchRect/CenterContainer" index="0"]
+[node name="Label" parent="InventoryManagerControl/NotebookBackground/Tabs/NotesTab/NinePatchRect/CenterContainer" index="0"]
 text = "Notes"
 
-[node name="InventoryTab" parent="InventoryManager/NotebookBackground/Tabs" instance=ExtResource("4_ee8kr")]
+[node name="InventoryTab" parent="InventoryManagerControl/NotebookBackground/Tabs" instance=ExtResource("4_ee8kr")]
 custom_minimum_size = Vector2(74, 14)
 layout_mode = 2
 
-[node name="NinePatchRect" parent="InventoryManager/NotebookBackground/Tabs/InventoryTab" index="0"]
+[node name="NinePatchRect" parent="InventoryManagerControl/NotebookBackground/Tabs/InventoryTab" index="0"]
 offset_right = 74.0
 offset_bottom = 14.0
 
-[node name="Label" parent="InventoryManager/NotebookBackground/Tabs/InventoryTab/NinePatchRect/CenterContainer" index="0"]
+[node name="Label" parent="InventoryManagerControl/NotebookBackground/Tabs/InventoryTab/NinePatchRect/CenterContainer" index="0"]
 text = "Inventory"
 
-[node name="Notes" type="ItemList" parent="InventoryManager/NotebookBackground"]
+[node name="Notes" type="ItemList" parent="InventoryManagerControl/NotebookBackground"]
 layout_mode = 0
-offset_left = 423.0
-offset_top = 62.0
+offset_left = 437.0
+offset_top = 87.0
 offset_right = 705.0
 offset_bottom = 572.0
 allow_search = false
@@ -84,18 +95,20 @@ item_count = 2
 item_0/text = "Letter to Sophie"
 item_1/text = "Poisoned wine"
 
-[node name="Inventory" type="ItemList" parent="InventoryManager/NotebookBackground"]
+[node name="Inventory" type="ItemList" parent="InventoryManagerControl/NotebookBackground"]
 layout_mode = 0
-offset_left = 423.0
-offset_top = 62.0
+offset_left = 436.0
+offset_top = 86.0
 offset_right = 705.0
 offset_bottom = 572.0
 allow_search = false
 item_count = 2
-item_0/text = "Key to shed"
-item_1/text = "Lantern"
+item_0/text = "Apple"
+item_0/icon = ExtResource("10_e1ea8")
+item_1/text = "Stick"
+item_1/icon = ExtResource("12_fkveu")
 
-[node name="LeftFold" type="TextureRect" parent="InventoryManager/NotebookBackground"]
+[node name="LeftFold" type="TextureRect" parent="InventoryManagerControl/NotebookBackground"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -107,5 +120,47 @@ offset_bottom = -23.0
 grow_vertical = 0
 texture = ExtResource("5_8537s")
 
-[editable path="InventoryManager/NotebookBackground/Tabs/NotesTab"]
-[editable path="InventoryManager/NotebookBackground/Tabs/InventoryTab"]
+[node name="Note" type="Panel" parent="InventoryManagerControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fkveu")
+
+[node name="Panel" type="Panel" parent="InventoryManagerControl/Note"]
+custom_minimum_size = Vector2(280, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryManagerControl/Note/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="NoteText" type="RichTextLabel" parent="InventoryManagerControl/Note/Panel/MarginContainer"]
+layout_mode = 2
+text = "Dear Sophie.
+
+I hope this letter finds you well. first of all let me just say that."
+
+[editable path="InventoryManagerControl/NotebookBackground/Tabs/NotesTab"]
+[editable path="InventoryManagerControl/NotebookBackground/Tabs/InventoryTab"]

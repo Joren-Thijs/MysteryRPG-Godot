@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://cqsm6hu7oql5i"]
+
+[ext_resource type="Script" uid="uid://ceyulhcsxogsi" path="res://inventory/note.gd" id="1_iih1l"]
+
+[resource]
+script = ExtResource("1_iih1l")
+name = "Poisoned wine"
+note = "Oh no the wine has been posioned! But who could have done this?"
+metadata/_custom_type_script = "uid://ceyulhcsxogsi"

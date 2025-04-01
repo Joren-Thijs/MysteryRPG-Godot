@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwpqmcid0feln"]
+[gd_scene load_steps=5 format=3 uid="uid://bwpqmcid0feln"]
 
 [ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_npu5j"]
+[ext_resource type="Resource" uid="uid://dicbpc14ytqbe" path="res://inventory/items/key.tres" id="2_5i4gq"]
 [ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_jpdjm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5i4gq"]
@@ -8,6 +9,7 @@ size = Vector2(32, 62)
 
 [node name="BookCase" type="StaticBody2D"]
 script = ExtResource("1_npu5j")
+item = ExtResource("2_5i4gq")
 metadata/_custom_type_script = "uid://rccr0gsx3b37"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

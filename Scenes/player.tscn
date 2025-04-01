@@ -1,9 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://ymxp2tb5roub"]
+[gd_scene load_steps=17 format=3 uid="uid://ymxp2tb5roub"]
 
 [ext_resource type="Script" uid="uid://b6vpdyj3sewvp" path="res://scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://dn542cx868i1s" path="res://characters/sprites/characters1.png" id="1_v0iea"]
-[ext_resource type="Resource" uid="uid://cmrl1emkck1ve" path="res://inventory/player_inventory.tres" id="2_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://bctxxrdsvs85n" path="res://inventory/inventory_ui.tscn" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("1_v0iea")
@@ -129,9 +127,7 @@ radius = 6.0
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
-position = Vector2(1, 0)
 script = ExtResource("1_cvnsp")
-inventory = ExtResource("2_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
@@ -146,12 +142,3 @@ shape = SubResource("CircleShape2D_cvnsp")
 
 [node name="RayCast" type="RayCast2D" parent="."]
 target_position = Vector2(0, 20)
-
-[node name="Inventory_UI" parent="." instance=ExtResource("4_dqkch")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 50.0
-offset_bottom = 50.0
-grow_horizontal = 1
-grow_vertical = 1

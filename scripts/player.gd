@@ -9,8 +9,6 @@ var speed = 0
 var direction: Vector2 = Vector2.ZERO
 var is_talking := false
 
-@export var inventory: Inventory
-
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast
 
@@ -24,7 +22,7 @@ func _physics_process(delta: float) -> void:
     move_and_slide()
     
 func get_movement() -> void:
-    if is_talking:
+    if is_talking or InventoryManager.is_open:
         direction = Vector2.ZERO
         animated_sprite.stop()
         return

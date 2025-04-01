@@ -1,8 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://bctxxrdsvs85n"]
+[gd_scene load_steps=4 format=3 uid="uid://cjkued8bgdkrt"]
 
-[ext_resource type="Script" uid="uid://wmg0yh32ob8o" path="res://inventory/inventory_ui.gd" id="1_hfbh7"]
 [ext_resource type="Texture2D" uid="uid://dm4fdq66pgyve" path="res://inventory/sprites/inventory-background.png" id="2_2hut1"]
-[ext_resource type="PackedScene" uid="uid://bo75gycoj31vf" path="res://inventory/inventory_ui_slot.tscn" id="3_cedrj"]
+[ext_resource type="PackedScene" uid="uid://r4oochccyaoe" path="res://inventory/inventory_ui_slot.tscn" id="3_cedrj"]
+
+[sub_resource type="GDScript" id="GDScript_2hut1"]
+script/source = "extends Control
+
+@onready var inventory: Inventory = preload(\"res://inventory/player_inventory.tres\")
+@onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+
+var is_open := false
+
+func _ready() -> void:
+    update_slots()
+    close()
+    
+func update_slots():
+    for i in range(min(inventory.items.size(), slots.size())):
+        slots[i].update(inventory.items[i])
+    
+func _process(delta: float) -> void:
+    if Input.is_action_just_pressed(\"i\"):
+        if is_open:
+            close()
+        else: 
+            open()
+    
+func open():
+    visible = true
+    is_open = true
+    
+func close():
+    visible = false
+    is_open = false
+"
 
 [node name="Inventory_UI" type="Control"]
 custom_minimum_size = Vector2(83, 64)
@@ -14,7 +45,7 @@ offset_right = -1069.0
 offset_bottom = -584.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hfbh7")
+script = SubResource("GDScript_2hut1")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
