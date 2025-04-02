@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwpqmcid0feln"]
+[gd_scene load_steps=6 format=3 uid="uid://bwpqmcid0feln"]
 
 [ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_npu5j"]
-[ext_resource type="Resource" uid="uid://dicbpc14ytqbe" path="res://inventory/items/key.tres" id="2_5i4gq"]
+[ext_resource type="Resource" uid="uid://7xuly6jmf6pp" path="res://game_objects/letter_found.dialogue" id="2_5i4gq"]
 [ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_jpdjm"]
+[ext_resource type="Resource" uid="uid://bkuddvh6m4iqf" path="res://inventory/items/letters/letter_to_sophie.tres" id="3_03a6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5i4gq"]
 size = Vector2(32, 62)
 
 [node name="BookCase" type="StaticBody2D"]
 script = ExtResource("1_npu5j")
-item = ExtResource("2_5i4gq")
+dialogue = ExtResource("2_5i4gq")
+item = ExtResource("3_03a6j")
 metadata/_custom_type_script = "uid://rccr0gsx3b37"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

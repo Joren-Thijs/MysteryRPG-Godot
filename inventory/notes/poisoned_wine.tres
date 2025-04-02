@@ -5,5 +5,6 @@
 [resource]
 script = ExtResource("1_iih1l")
 name = "Poisoned wine"
+notification_name = "poisined wine"
 note = "Oh no the wine has been posioned! But who could have done this?"
 metadata/_custom_type_script = "uid://ceyulhcsxogsi"

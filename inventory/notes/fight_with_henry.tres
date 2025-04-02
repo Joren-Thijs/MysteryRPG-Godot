@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://5bp0fad2srdr"]
+
+[ext_resource type="Script" uid="uid://ceyulhcsxogsi" path="res://inventory/note.gd" id="1_36lw8"]
+
+[resource]
+script = ExtResource("1_36lw8")
+name = "Fight with Henry"
+notification_name = "s fight with Henry"
+note = "There was a fight with Henry about a payment."
+metadata/_custom_type_script = "uid://ceyulhcsxogsi"

@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_cd3v3")
 name = "apple"
+notification_name = "An apple"
 texture = ExtResource("2_cepck")
 metadata/_custom_type_script = "uid://dtd36pa4yp8g6"

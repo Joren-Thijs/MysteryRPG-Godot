@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_b46qi")
 name = "stick"
+notification_name = "A stick"
 texture = ExtResource("2_lgsvo")
 metadata/_custom_type_script = "uid://dtd36pa4yp8g6"

@@ -23,6 +23,7 @@ func _ready() -> void:
     notes_tab.gui_input.connect(on_notes_tab_gui_input)
     inventory_tab.gui_input.connect(on_inventory_tab_gui_input)
     notes_list.item_selected.connect(on_note_selected)
+    inventory_list.item_selected.connect(on_letter_selected)
     note_display.hide()
     show_notes()
 
@@ -78,13 +79,18 @@ func show_inventory() -> void:
 func render_inventory_list() -> void:
     inventory_list.clear()
     for item in inventory:
-        inventory_list.add_item(item.name, item.texture, false)
+        inventory_list.add_item(item.name, item.texture, item is Letter)
         
 func render_note_list() -> void:
     notes_list.clear()
     for note in notes:
         notes_list.add_item(note.name, null, true)
-        
+
 func on_note_selected(index: int) -> void:
     note_display_text.text = notes[index].note
+    note_display.show()
+
+func on_letter_selected(index: int) -> void:
+    var letter = inventory[index] as Letter
+    note_display_text.text = letter.letter
     note_display.show()

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=3 format=3 uid="uid://bkuddvh6m4iqf"]
+
+[ext_resource type="Script" uid="uid://w6tmw5fsm25k" path="res://inventory/letter.gd" id="1_v4a2f"]
+[ext_resource type="Texture2D" uid="uid://ch6wtq1f4etcr" path="res://inventory/sprites/letter.png" id="2_38ku5"]
+
+[resource]
+script = ExtResource("1_v4a2f")
+letter = "Dear Sophie
+
+I hope this letter finds you in good health. I still remeber seeing you at the fair last year. I hope we can do so again this year.
+
+Kind regards
+
+Jeffrey
+
+Kind regards"
+name = "Letter to Sophie"
+notification_name = "A letter"
+texture = ExtResource("2_38ku5")
+metadata/_custom_type_script = "uid://w6tmw5fsm25k"

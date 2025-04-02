@@ -5,5 +5,6 @@
 [resource]
 script = ExtResource("1_2sls7")
 name = "What happend"
+notification_name = "what happend"
 note = "Poor Jeffrey. I have to figure out what happend."
 metadata/_custom_type_script = "uid://ceyulhcsxogsi"

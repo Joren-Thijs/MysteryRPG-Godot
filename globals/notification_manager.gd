@@ -23,13 +23,13 @@ func _process(delta: float) -> void:
     pass
 
 func display_inventory_notification(item: InventoryItem) -> void:
-    notification_label.text = "Item %s was added to your inventory" % item.name
+    notification_label.text = "%s was added to your inventory" % item.notification_name
     animation_player.play("show_notification")
     await animation_player.animation_finished
     notification_timer.start()
     
 func display_note_notification(note: Note) -> void:
-    notification_label.text = "You made a note about %s" % note.name
+    notification_label.text = "You made a note about %s" % note.notification_name
     animation_player.play("show_notification")
     await animation_player.animation_finished
     notification_timer.start()

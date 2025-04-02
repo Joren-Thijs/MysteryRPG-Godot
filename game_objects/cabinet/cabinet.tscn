@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5727c15ji861"]
+[gd_scene load_steps=5 format=3 uid="uid://c5727c15ji861"]
 
 [ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_symo4"]
-[ext_resource type="Resource" uid="uid://3sm6lsmfv5d6" path="res://game_objects/nothing_here.dialogue" id="2_grjx3"]
 [ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_nn1k8"]
 [ext_resource type="Resource" uid="uid://cqsm6hu7oql5i" path="res://inventory/notes/poisoned_wine.tres" id="3_grjx3"]
 
@@ -10,7 +9,6 @@ size = Vector2(32, 62)
 
 [node name="Cabinet" type="StaticBody2D"]
 script = ExtResource("1_symo4")
-dialogue = ExtResource("2_grjx3")
 note = ExtResource("3_grjx3")
 metadata/_custom_type_script = "uid://rccr0gsx3b37"
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://7xuly6jmf6pp"
+path="res://.godot/imported/letter_found.dialogue-87888c732bf774eb9c3c1577f9ab699f.tres"
+
+[deps]
+
+source_file="res://game_objects/letter_found.dialogue"
+dest_files=["res://.godot/imported/letter_found.dialogue-87888c732bf774eb9c3c1577f9ab699f.tres"]
+
+[params]
+
+defaults=true
