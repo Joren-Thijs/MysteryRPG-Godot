@@ -7,7 +7,7 @@ const SPRINT_SPEED = 5500
 const RAY_CAST_SIZE = 20
 var speed = 0
 var direction: Vector2 = Vector2.ZERO
-var is_talking := false
+var dialogue_in_progress := false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast
@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
     move_and_slide()
     
 func get_movement() -> void:
-    if is_talking or InventoryManager.is_open:
+    if dialogue_in_progress or InventoryManager.is_open:
         direction = Vector2.ZERO
         animated_sprite.stop()
         return
@@ -53,7 +53,7 @@ func get_movement() -> void:
         animated_sprite.stop()
         
 func _input(event: InputEvent) -> void:
-    if event.is_action_pressed("interact") && ray_cast.is_colliding():
+    if event.is_action_pressed("interact") and ray_cast.is_colliding() and !dialogue_in_progress:
         var body = ray_cast.get_collider()
         if body is Character:
             body.interact()
@@ -61,7 +61,7 @@ func _input(event: InputEvent) -> void:
             body.interact()
             
 func on_dialogue_started(resource: DialogueResource) -> void:
-    is_talking = true
+    dialogue_in_progress = true
 
 func on_dialogue_ended(resource: DialogueResource) -> void:
-    is_talking = false
+    dialogue_in_progress = false
