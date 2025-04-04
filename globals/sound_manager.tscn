@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://wn3mchq3o6we"]
+
+[ext_resource type="Script" uid="uid://cxkapfdioi5od" path="res://globals/sound_manager.gd" id="1_017xh"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource("1_017xh")
+
+[node name="SoundEffectPlayer" type="AudioStreamPlayer2D" parent="."]
+
+[node name="SoundEffectTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="SoundEffectTimer" to="." method="_on_sound_effect_timer_timeout"]

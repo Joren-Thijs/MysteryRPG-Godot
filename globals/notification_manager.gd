@@ -15,7 +15,7 @@ func _ready() -> void:
 func setup_timer():
     add_child(notification_timer)
     notification_timer.one_shot = true
-    notification_timer.wait_time = 3.0
+    notification_timer.wait_time = 4.0
     notification_timer.timeout.connect(on_notification_timer_timeout)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,13 +25,13 @@ func _process(delta: float) -> void:
 func display_inventory_notification(item: InventoryItem) -> void:
     notification_label.text = "%s was added to your inventory" % item.notification_name
     animation_player.play("show_notification")
-    await animation_player.animation_finished
+    SoundManager.play_item_added()
     notification_timer.start()
     
 func display_note_notification(note: Note) -> void:
     notification_label.text = "You made a note about %s" % note.notification_name
     animation_player.play("show_notification")
-    await animation_player.animation_finished
+    SoundManager.play_note_added()
     notification_timer.start()
     
 func on_notification_timer_timeout() -> void:

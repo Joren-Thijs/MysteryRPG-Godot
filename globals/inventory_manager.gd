@@ -55,6 +55,7 @@ func add_note(new_note: Note) -> void:
 
 func toggle_visibility() -> void:
     visible = !visible
+    SoundManager.play_open_notebook()
 
 func on_notes_tab_gui_input(event: InputEvent) -> void:
     if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

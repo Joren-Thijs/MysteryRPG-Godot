@@ -17,12 +17,13 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneManager="*res://globals/SceneManager.tscn"
 Music="*res://globals/music.gd"
 MusicManager="*res://globals/music_manager.tscn"
+SoundManager="*res://globals/sound_manager.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 InventoryManager="*res://globals/inventory_manager.tscn"
 NotificationManager="*res://globals/notification_manager.tscn"
+SceneManager="*res://globals/SceneManager.tscn"
 
 [dialogue_manager]
 
