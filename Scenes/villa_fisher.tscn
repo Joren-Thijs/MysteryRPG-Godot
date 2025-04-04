@@ -1,12 +1,20 @@
-[gd_scene load_steps=11 format=4 uid="uid://bhcjkwrjy34mb"]
+[gd_scene load_steps=19 format=4 uid="uid://bhcjkwrjy34mb"]
 
 [ext_resource type="Script" uid="uid://b1j7obmsex4oa" path="res://scenes/toast/toast_scene.gd" id="1_y0ep0"]
 [ext_resource type="Texture2D" uid="uid://bj1xtxyhgqlti" path="res://sprites/Tiles/Tiles1.png" id="2_8rpot"]
 [ext_resource type="Texture2D" uid="uid://b8if1l6fchwyh" path="res://sprites/Tiles/tiles2.png" id="3_8neva"]
 [ext_resource type="PackedScene" uid="uid://ymxp2tb5roub" path="res://scenes/player.tscn" id="4_3w7yf"]
-[ext_resource type="PackedScene" uid="uid://c5727c15ji861" path="res://game_objects/cabinet/cabinet.tscn" id="6_8neva"]
+[ext_resource type="PackedScene" uid="uid://bulxihjpfnlsv" path="res://game_objects/furniture/pantry.tscn" id="6_6afdj"]
+[ext_resource type="PackedScene" uid="uid://c5727c15ji861" path="res://game_objects/furniture/cabinet.tscn" id="6_8neva"]
 [ext_resource type="PackedScene" uid="uid://btnse7caomuuy" path="res://game_objects/door/door.tscn" id="6_8rpot"]
-[ext_resource type="PackedScene" uid="uid://bwpqmcid0feln" path="res://game_objects/book_case/book_case.tscn" id="7_8neva"]
+[ext_resource type="PackedScene" uid="uid://bwpqmcid0feln" path="res://game_objects/furniture/book_case.tscn" id="7_8neva"]
+[ext_resource type="PackedScene" uid="uid://hg3lnf7drxsb" path="res://game_objects/furniture/table.tscn" id="9_c1kl8"]
+[ext_resource type="PackedScene" uid="uid://bhg32db4ikcyv" path="res://game_objects/furniture/small_bed.tscn" id="10_hsiuo"]
+[ext_resource type="PackedScene" uid="uid://iumw1oqrj8db" path="res://game_objects/furniture/nightstand.tscn" id="11_25378"]
+[ext_resource type="PackedScene" uid="uid://q7ey41b41g1v" path="res://game_objects/paintings/apple_painting.tscn" id="11_bg1fm"]
+[ext_resource type="PackedScene" uid="uid://c6fo8pb16msoo" path="res://game_objects/paintings/flower_painting.tscn" id="12_4lt0q"]
+[ext_resource type="PackedScene" uid="uid://cnahavg70vgpa" path="res://game_objects/paintings/grass_painting.tscn" id="13_i1wtv"]
+[ext_resource type="PackedScene" uid="uid://b2gch37pk0d6c" path="res://game_objects/paintings/moon_painting.tscn" id="15_g5l7v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bx4"]
 texture = ExtResource("2_8rpot")
@@ -1871,11 +1879,11 @@ position = Vector2(354, 67)
 z_index = 1
 zoom = Vector2(2.5, 2.5)
 
-[node name="Door" parent="Y-sort" instance=ExtResource("6_8rpot")]
-position = Vector2(687, 304)
-
 [node name="Dining hall" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
+
+[node name="Pantry" parent="Y-sort/Dining hall" instance=ExtResource("6_6afdj")]
+position = Vector2(524, -16)
 
 [node name="Cabinet" parent="Y-sort/Dining hall" instance=ExtResource("6_8neva")]
 position = Vector2(354, 16)
@@ -1883,29 +1891,105 @@ position = Vector2(354, 16)
 [node name="BookCase" parent="Y-sort/Dining hall" instance=ExtResource("7_8neva")]
 position = Vector2(386, 16)
 
-[node name="Middle room" type="Node2D" parent="Y-sort"]
+[node name="Table" parent="Y-sort/Dining hall" instance=ExtResource("9_c1kl8")]
+position = Vector2(437, 84)
+
+[node name="Table2" parent="Y-sort/Dining hall" instance=ExtResource("9_c1kl8")]
+position = Vector2(501, 84)
+
+[node name="Guest room 1" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
+position = Vector2(0, 480)
 
-[node name="Cabinet2" parent="Y-sort/Middle room" instance=ExtResource("6_8neva")]
-position = Vector2(-83, 466)
+[node name="SmallBed" parent="Y-sort/Guest room 1" instance=ExtResource("10_hsiuo")]
+position = Vector2(-86, -19)
 
-[node name="BookCase" parent="Y-sort/Middle room" instance=ExtResource("7_8neva")]
-position = Vector2(-51, 466)
+[node name="Cabinet" parent="Y-sort/Guest room 1" instance=ExtResource("6_8neva")]
+position = Vector2(134, -18)
+
+[node name="Nightstand" parent="Y-sort/Guest room 1" instance=ExtResource("11_25378")]
+position = Vector2(-54, -36)
+
+[node name="ApplePainting" parent="Y-sort/Guest room 1" instance=ExtResource("11_bg1fm")]
+position = Vector2(-9, -65)
+
+[node name="Guest room 2" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
+position = Vector2(467, 483)
+
+[node name="Cabinet2" parent="Y-sort/Guest room 2" instance=ExtResource("6_8neva")]
+position = Vector2(-52, -18)
+
+[node name="BookCase" parent="Y-sort/Guest room 2" instance=ExtResource("7_8neva")]
+position = Vector2(-20, -18)
+
+[node name="SmallBed" parent="Y-sort/Guest room 2" instance=ExtResource("10_hsiuo")]
+position = Vector2(151, -17)
+
+[node name="Nightstand" parent="Y-sort/Guest room 2" instance=ExtResource("11_25378")]
+position = Vector2(120, -35)
+
+[node name="Guest room 3" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
+position = Vector2(0, 683)
+
+[node name="SmallBed" parent="Y-sort/Guest room 3" instance=ExtResource("10_hsiuo")]
+position = Vector2(-87, -29)
+
+[node name="Cabinet" parent="Y-sort/Guest room 3" instance=ExtResource("6_8neva")]
+position = Vector2(23, -30)
+
+[node name="BookCase" parent="Y-sort/Guest room 3" instance=ExtResource("7_8neva")]
+position = Vector2(183, -30)
+
+[node name="Nightstand" parent="Y-sort/Guest room 3" instance=ExtResource("11_25378")]
+position = Vector2(-56, -44)
+
+[node name="Guest room 4" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
+position = Vector2(500, 761)
+
+[node name="Cabinet" parent="Y-sort/Guest room 4" instance=ExtResource("6_8neva")]
+position = Vector2(-66, -81)
+
+[node name="SmallBed" parent="Y-sort/Guest room 4" instance=ExtResource("10_hsiuo")]
+position = Vector2(111, -76)
+
+[node name="Nightstand" parent="Y-sort/Guest room 4" instance=ExtResource("11_25378")]
+position = Vector2(80, -94)
+
+[node name="FlowerPainting" parent="Y-sort/Guest room 4" instance=ExtResource("12_4lt0q")]
+position = Vector2(42, -125)
 
 [node name="Bottom right room" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
+position = Vector2(471, 1065)
 
-[node name="Cabinet3" parent="Y-sort/Bottom right room" instance=ExtResource("6_8neva")]
-position = Vector2(371, 997)
+[node name="Cabinet" parent="Y-sort/Bottom right room" instance=ExtResource("6_8neva")]
+position = Vector2(-91, -72)
 
 [node name="BookCase" parent="Y-sort/Bottom right room" instance=ExtResource("7_8neva")]
-position = Vector2(403, 997)
+position = Vector2(-59, -72)
 
-[node name="Bottom left room2" type="Node2D" parent="Y-sort"]
+[node name="Bottom left room" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
+position = Vector2(-435, 1075)
 
-[node name="Cabinet3" parent="Y-sort/Bottom left room2" instance=ExtResource("6_8neva")]
-position = Vector2(-504, 977)
+[node name="Cabinet" parent="Y-sort/Bottom left room" instance=ExtResource("6_8neva")]
+position = Vector2(-83, -98)
 
-[node name="BookCase" parent="Y-sort/Bottom left room2" instance=ExtResource("7_8neva")]
-position = Vector2(-472, 977)
+[node name="BookCase" parent="Y-sort/Bottom left room" instance=ExtResource("7_8neva")]
+position = Vector2(-51, -98)
+
+[node name="GrassPainting" parent="Y-sort/Bottom left room" instance=ExtResource("13_i1wtv")]
+position = Vector2(70, -144)
+
+[node name="Hallways" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
+position = Vector2(311, 327)
+
+[node name="GardenDoor" parent="Y-sort/Hallways" instance=ExtResource("6_8rpot")]
+position = Vector2(376, -23)
+
+[node name="MoonPainting" parent="Y-sort/Hallways" instance=ExtResource("15_g5l7v")]
+position = Vector2(-381, -61)

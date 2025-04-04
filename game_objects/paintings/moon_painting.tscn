@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2gch37pk0d6c"]
+
+[ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_6aj2p"]
+[ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_tlf42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jfch"]
+size = Vector2(58, 26)
+
+[node name="MoonPainting" type="StaticBody2D"]
+script = ExtResource("1_6aj2p")
+metadata/_custom_type_script = "uid://rccr0gsx3b37"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tlf42")
+region_enabled = true
+region_rect = Rect2(259, 134, 58, 26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8jfch")
