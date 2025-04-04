@@ -2019,6 +2019,7 @@ position = Vector2(376, -23)
 position = Vector2(-381, -61)
 
 [node name="Kitchen" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
 position = Vector2(-429, 387)
 
 [node name="GlassesTable2" parent="Y-sort/Kitchen" instance=ExtResource("17_g37gj")]
@@ -2061,6 +2062,7 @@ position = Vector2(-42, -119)
 position = Vector2(125, -118)
 
 [node name="Library" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
 position = Vector2(57, 89)
 
 [node name="BigCouch" parent="Y-sort/Library" instance=ExtResource("23_1s7nk")]
