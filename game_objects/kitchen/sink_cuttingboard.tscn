@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://deeps8xnd7dxg"]
+
+[ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_go2sc"]
+[ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_g7mll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erdhp"]
+size = Vector2(64, 32)
+
+[node name="SinkCuttingboard" type="StaticBody2D"]
+script = ExtResource("1_go2sc")
+metadata/_custom_type_script = "uid://rccr0gsx3b37"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_g7mll")
+region_enabled = true
+region_rect = Rect2(192, 288, 64, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_erdhp")
