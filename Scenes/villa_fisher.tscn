@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bhcjkwrjy34mb"]
+[gd_scene load_steps=28 format=4 uid="uid://bhcjkwrjy34mb"]
 
 [ext_resource type="Script" uid="uid://b1j7obmsex4oa" path="res://scenes/toast/toast_scene.gd" id="1_y0ep0"]
 [ext_resource type="Texture2D" uid="uid://bj1xtxyhgqlti" path="res://sprites/Tiles/Tiles1.png" id="2_8rpot"]
@@ -16,11 +16,14 @@
 [ext_resource type="PackedScene" uid="uid://dqiubo71v1n5j" path="res://game_objects/furniture/fire_place.tscn" id="12_i1wtv"]
 [ext_resource type="PackedScene" uid="uid://cnahavg70vgpa" path="res://game_objects/paintings/grass_painting.tscn" id="13_i1wtv"]
 [ext_resource type="PackedScene" uid="uid://b2gch37pk0d6c" path="res://game_objects/paintings/moon_painting.tscn" id="15_g5l7v"]
-[ext_resource type="PackedScene" uid="uid://b4dsf4uftegq" path="res://game_objects/kitchen/glasses_table.tscn" id="17_g37gj"]
+[ext_resource type="PackedScene" uid="uid://b4dsf4uftegq" path="res://game_objects/furniture/glasses_table.tscn" id="17_g37gj"]
 [ext_resource type="PackedScene" uid="uid://bnosndq05y360" path="res://game_objects/kitchen/oven.tscn" id="18_brio5"]
 [ext_resource type="PackedScene" uid="uid://co3d11wnqrqbb" path="res://game_objects/kitchen/sink_fish.tscn" id="19_0wwuk"]
 [ext_resource type="PackedScene" uid="uid://bh7m6ew8m3leq" path="res://game_objects/kitchen/sink_dough.tscn" id="20_1s7nk"]
 [ext_resource type="PackedScene" uid="uid://deeps8xnd7dxg" path="res://game_objects/kitchen/sink_cuttingboard.tscn" id="21_0birb"]
+[ext_resource type="PackedScene" uid="uid://bicxeucm20rw1" path="res://game_objects/furniture/drink_table.tscn" id="22_brio5"]
+[ext_resource type="PackedScene" uid="uid://biioou2j6ar4c" path="res://game_objects/furniture/big_couch.tscn" id="23_1s7nk"]
+[ext_resource type="PackedScene" uid="uid://cao45hotqphdo" path="res://game_objects/furniture/small_table.tscn" id="24_0birb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bx4"]
 texture = ExtResource("2_8rpot")
@@ -1919,6 +1922,9 @@ position = Vector2(-54, -36)
 [node name="ApplePainting" parent="Y-sort/Guest room 1" instance=ExtResource("11_bg1fm")]
 position = Vector2(-9, -65)
 
+[node name="GlassesTable" parent="Y-sort/Guest room 1" instance=ExtResource("17_g37gj")]
+position = Vector2(33, -34)
+
 [node name="Guest room 2" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
 position = Vector2(467, 483)
@@ -1934,6 +1940,9 @@ position = Vector2(151, -17)
 
 [node name="Nightstand" parent="Y-sort/Guest room 2" instance=ExtResource("11_25378")]
 position = Vector2(120, -35)
+
+[node name="GlassesTable" parent="Y-sort/Guest room 2" instance=ExtResource("17_g37gj")]
+position = Vector2(56, -34)
 
 [node name="Guest room 3" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
@@ -1954,6 +1963,9 @@ position = Vector2(-56, -44)
 [node name="Fireplace" parent="Y-sort/Guest room 3" instance=ExtResource("12_i1wtv")]
 position = Vector2(499, 277)
 
+[node name="GlassesTable" parent="Y-sort/Guest room 3" instance=ExtResource("17_g37gj")]
+position = Vector2(102, -41)
+
 [node name="Guest room 4" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
 position = Vector2(500, 761)
@@ -1969,6 +1981,9 @@ position = Vector2(80, -94)
 
 [node name="FlowerPainting" parent="Y-sort/Guest room 4" instance=ExtResource("12_4lt0q")]
 position = Vector2(42, -125)
+
+[node name="DrinkTable" parent="Y-sort/Guest room 4" instance=ExtResource("22_brio5")]
+position = Vector2(-11, -91)
 
 [node name="Bottom right room" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
@@ -2007,10 +2022,10 @@ position = Vector2(-381, -61)
 position = Vector2(-429, 387)
 
 [node name="GlassesTable2" parent="Y-sort/Kitchen" instance=ExtResource("17_g37gj")]
-position = Vector2(-69, -133)
+position = Vector2(135, 118)
 
 [node name="Oven" parent="Y-sort/Kitchen" instance=ExtResource("18_brio5")]
-position = Vector2(76, -149)
+position = Vector2(74, -150)
 
 [node name="SinkFish" parent="Y-sort/Kitchen" instance=ExtResource("19_0wwuk")]
 position = Vector2(-33, -42)
@@ -2025,10 +2040,40 @@ position = Vector2(-32, 10)
 position = Vector2(31, -42)
 
 [node name="GlassesTable" parent="Y-sort/Kitchen" instance=ExtResource("17_g37gj")]
-position = Vector2(-101, -133)
+position = Vector2(102, 118)
 
 [node name="SinkCuttingboard" parent="Y-sort/Kitchen" instance=ExtResource("21_0birb")]
 position = Vector2(-32, 62)
 
 [node name="SinkCuttingboard2" parent="Y-sort/Kitchen" instance=ExtResource("21_0birb")]
 position = Vector2(32, 10)
+
+[node name="DrinkTable" parent="Y-sort/Kitchen" instance=ExtResource("22_brio5")]
+position = Vector2(-114, 122)
+
+[node name="Pantry" parent="Y-sort/Kitchen" instance=ExtResource("6_6afdj")]
+position = Vector2(-93, -149)
+
+[node name="Cabinet" parent="Y-sort/Kitchen" instance=ExtResource("6_8neva")]
+position = Vector2(-42, -119)
+
+[node name="Cabinet2" parent="Y-sort/Kitchen" instance=ExtResource("6_8neva")]
+position = Vector2(125, -118)
+
+[node name="Library" type="Node2D" parent="Y-sort"]
+position = Vector2(57, 89)
+
+[node name="BigCouch" parent="Y-sort/Library" instance=ExtResource("23_1s7nk")]
+position = Vector2(-143, -19)
+
+[node name="SmallTable" parent="Y-sort/Library" instance=ExtResource("24_0birb")]
+position = Vector2(-97, -18)
+
+[node name="SmallTable2" parent="Y-sort/Library" instance=ExtResource("24_0birb")]
+position = Vector2(168, 84)
+
+[node name="DrinkTable" parent="Y-sort/Library" instance=ExtResource("22_brio5")]
+position = Vector2(165, -27)
+
+[node name="GlassesTable" parent="Y-sort/Library" instance=ExtResource("17_g37gj")]
+position = Vector2(-143, 99)

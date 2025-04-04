@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cao45hotqphdo"]
+
+[ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_33eqc"]
+[ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_dpfpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b1tk"]
+size = Vector2(28, 21)
+
+[node name="SmallTable" type="StaticBody2D"]
+script = ExtResource("1_33eqc")
+metadata/_custom_type_script = "uid://rccr0gsx3b37"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.997584)
+texture = ExtResource("2_dpfpe")
+region_enabled = true
+region_rect = Rect2(33, 161, 30, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -4.5)
+shape = SubResource("RectangleShape2D_4b1tk")

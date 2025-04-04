@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://biioou2j6ar4c"]
+
+[ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_tn0wx"]
+[ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_3e5hr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b1tk"]
+size = Vector2(28, 68)
+
+[node name="BigCouch" type="StaticBody2D"]
+script = ExtResource("1_tn0wx")
+metadata/_custom_type_script = "uid://rccr0gsx3b37"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.997584)
+texture = ExtResource("2_3e5hr")
+region_enabled = true
+region_rect = Rect2(192, 69, 32, 88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 5)
+shape = SubResource("RectangleShape2D_4b1tk")
