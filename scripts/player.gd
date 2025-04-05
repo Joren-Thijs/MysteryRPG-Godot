@@ -17,14 +17,30 @@ func _ready() -> void:
     DialogueManager.dialogue_ended.connect(on_dialogue_ended)
 
 func _physics_process(delta: float) -> void:
-    get_movement()
+    _get_movement()
+    _handle_animation()
     velocity = direction * speed * delta
     move_and_slide()
     
-func get_movement() -> void:
+func _handle_animation() -> void:
+    if direction == Vector2.UP:
+        animated_sprite.play("walk_up")
+        ray_cast.target_position = Vector2(0, -RAY_CAST_SIZE)
+    if direction == Vector2.DOWN:
+        animated_sprite.play("walk_down")
+        ray_cast.target_position = Vector2(0, RAY_CAST_SIZE)
+    if direction == Vector2.LEFT:
+        animated_sprite.play("walk_left")
+        ray_cast.target_position = Vector2(-RAY_CAST_SIZE, 0)
+    if direction == Vector2.RIGHT:
+        animated_sprite.play("walk_right")
+        ray_cast.target_position = Vector2(RAY_CAST_SIZE, 0)
+    if speed == 0:
+        animated_sprite.stop()
+        
+func _get_movement() -> void:
     if dialogue_in_progress or InventoryManager.is_open:
         direction = Vector2.ZERO
-        animated_sprite.stop()
         return
     
     if Input.is_action_pressed("sprint"):
@@ -34,23 +50,14 @@ func get_movement() -> void:
     
     if Input.is_action_pressed("move_up"):
         direction = Vector2(0, -1)
-        animated_sprite.play("walk_up")
-        ray_cast.target_position = Vector2(0, -RAY_CAST_SIZE)
     elif Input.is_action_pressed("move_down"):
         direction = Vector2(0, 1)
-        animated_sprite.play("walk_down")
-        ray_cast.target_position = Vector2(0, RAY_CAST_SIZE)
     elif Input.is_action_pressed("move_left"):
         direction = Vector2(-1, 0)
-        animated_sprite.play("walk_left")
-        ray_cast.target_position = Vector2(-RAY_CAST_SIZE, 0)
     elif Input.is_action_pressed("move_right"):
         direction = Vector2(1, 0)
-        animated_sprite.play("walk_right")
-        ray_cast.target_position = Vector2(RAY_CAST_SIZE, 0)
     else:
-        direction = Vector2.ZERO
-        animated_sprite.stop()
+        speed = 0
         
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("interact") and ray_cast.is_colliding() and !dialogue_in_progress:

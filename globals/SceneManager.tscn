@@ -7,33 +7,10 @@ bg_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
 
 [sub_resource type="Animation" id="Animation_4icwj"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SceneTransitionControl/SceneTransitionPanel:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SceneTransitionControl/SceneTransitionPanel:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_n4ogr"]
 resource_name = "scene_fade_in"
+length = 1.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -41,7 +18,7 @@ tracks/0/path = NodePath("SceneTransitionControl/SceneTransitionPanel:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.966667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -61,6 +38,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_7btlb"]
 resource_name = "scene_fade_out"
+length = 1.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -106,7 +84,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="SceneTransitionPanel" type="Panel" parent="SceneTransitionControl"]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

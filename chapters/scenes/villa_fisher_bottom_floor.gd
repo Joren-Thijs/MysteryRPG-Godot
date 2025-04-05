@@ -19,12 +19,14 @@ func _ready() -> void:
 
 func travel_to_from_basement(player: Player) -> void:
     basement_door_marker.move_player(player)
+    SoundManager.play_close_door()
 
 func travel_to_from_top_staircase(player: Player) -> void:
     staircase_marker.move_player(player)
 
 func travel_to_from_garden(player: Player) -> void:
     garden_door_marker.move_player(player)
+    SoundManager.play_close_door()
 
 func _on_player_entered_staircase_to_top_floor() -> void:
     print("player entered staircase")

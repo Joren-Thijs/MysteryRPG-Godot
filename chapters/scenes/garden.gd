@@ -15,9 +15,11 @@ func _ready() -> void:
 
 func travel_to_from_house(player: Player):
     house_door_marker.move_player(player)
+    SoundManager.play_close_door()
     
 func travel_to_from_garden_shed(player: Player):
     garden_shed_door_marker.move_player(player)
+    SoundManager.play_close_door()
 
 func _player_uses_door_to_garden_shed() -> void:
     print("player uses garden shed door")
