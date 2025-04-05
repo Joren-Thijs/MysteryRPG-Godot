@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bkrh227rwkh1a"]
+
+[ext_resource type="Script" uid="uid://dtd36pa4yp8g6" path="res://inventory/inventory_item.gd" id="1_bmfb3"]
+[ext_resource type="Texture2D" uid="uid://yagpxq3s10s4" path="res://inventory/sprites/lantern.png" id="2_bmfb3"]
+
+[resource]
+script = ExtResource("1_bmfb3")
+name = "lantern"
+notification_name = "A lantern"
+texture = ExtResource("2_bmfb3")
+metadata/_custom_type_script = "uid://dtd36pa4yp8g6"

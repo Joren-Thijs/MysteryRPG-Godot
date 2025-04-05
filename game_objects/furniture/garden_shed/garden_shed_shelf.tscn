@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://6vbmqv352u7s"]
+
+[ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_3y8cm"]
+[ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_0wmly"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t58g0"]
+size = Vector2(62, 56)
+
+[node name="GardenShedCabinet" type="StaticBody2D"]
+script = ExtResource("1_3y8cm")
+metadata/_custom_type_script = "uid://rccr0gsx3b37"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -26)
+texture = ExtResource("2_0wmly")
+region_enabled = true
+region_rect = Rect2(128, 448, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_t58g0")

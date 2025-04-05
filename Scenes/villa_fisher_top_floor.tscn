@@ -3104,35 +3104,35 @@ y_sort_enabled = true
 position = Vector2(234, 122)
 
 [node name="BigBed" parent="Y-sort/Large bed room" instance=ExtResource("5_6txp1")]
-position = Vector2(-3, -80)
+position = Vector2(-3, -44)
 
 [node name="Nightstand" parent="Y-sort/Large bed room" instance=ExtResource("6_vs0sb")]
-position = Vector2(-51, -94)
+position = Vector2(-51, -78)
 
 [node name="Nightstand2" parent="Y-sort/Large bed room" instance=ExtResource("6_vs0sb")]
-position = Vector2(44, -95)
+position = Vector2(45, -77)
 
 [node name="GlassesTable" parent="Y-sort/Large bed room" instance=ExtResource("7_tg5g8")]
-position = Vector2(-90, -89)
+position = Vector2(-90, -78)
 
 [node name="PottedPlantWhite" parent="Y-sort/Large bed room" instance=ExtResource("8_n0knc")]
-position = Vector2(92, -75)
+position = Vector2(92, -70)
 
 [node name="Bedroom 3" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
 position = Vector2(164, 398)
 
 [node name="SmallBed" parent="Y-sort/Bedroom 3" instance=ExtResource("9_yafh2")]
-position = Vector2(-86, -19)
+position = Vector2(-93, 18)
 
 [node name="Nightstand" parent="Y-sort/Bedroom 3" instance=ExtResource("6_vs0sb")]
-position = Vector2(-54, -36)
+position = Vector2(-56, -23)
 
 [node name="ApplePainting" parent="Y-sort/Bedroom 3" instance=ExtResource("10_bh3sx")]
-position = Vector2(-10, -65)
+position = Vector2(-10, -53)
 
 [node name="GlassesTable" parent="Y-sort/Bedroom 3" instance=ExtResource("7_tg5g8")]
-position = Vector2(33, -34)
+position = Vector2(34, -16)
 
 [node name="Bedroom 2" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
@@ -3142,13 +3142,13 @@ position = Vector2(420, 67)
 position = Vector2(-4, -19)
 
 [node name="SmallBed" parent="Y-sort/Bedroom 2" instance=ExtResource("9_yafh2")]
-position = Vector2(151, -17)
+position = Vector2(151, 17)
 
 [node name="Nightstand" parent="Y-sort/Bedroom 2" instance=ExtResource("6_vs0sb")]
-position = Vector2(120, -35)
+position = Vector2(120, -21)
 
 [node name="GlassesTable" parent="Y-sort/Bedroom 2" instance=ExtResource("7_tg5g8")]
-position = Vector2(56, -34)
+position = Vector2(56, -25)
 
 [node name="Bedroom 4" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
@@ -3158,23 +3158,23 @@ position = Vector2(459, 454)
 position = Vector2(-35, -73)
 
 [node name="SmallBed" parent="Y-sort/Bedroom 4" instance=ExtResource("9_yafh2")]
-position = Vector2(111, -76)
+position = Vector2(112, -42)
 
 [node name="Nightstand" parent="Y-sort/Bedroom 4" instance=ExtResource("6_vs0sb")]
-position = Vector2(80, -92)
+position = Vector2(80, -77)
 
 [node name="FlowerPainting" parent="Y-sort/Bedroom 4" instance=ExtResource("12_5cpup")]
-position = Vector2(42, -125)
+position = Vector2(41, -110)
 
 [node name="TeleportZone" parent="Y-sort" instance=ExtResource("13_10t1q")]
 position = Vector2(32, 78)
 destination = ExtResource("14_bu5ho")
 
 [node name="ApplePainting" parent="." instance=ExtResource("10_bh3sx")]
-position = Vector2(135, 172)
+position = Vector2(134, 180)
 
 [node name="GrassPainting" parent="." instance=ExtResource("15_bu5ho")]
-position = Vector2(360, 172)
+position = Vector2(361, 180)
 
 [node name="PottedPlantWhite" parent="." instance=ExtResource("8_n0knc")]
-position = Vector2(566, 226)
+position = Vector2(566, 230)

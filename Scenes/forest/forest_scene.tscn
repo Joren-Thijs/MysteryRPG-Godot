@@ -961,7 +961,7 @@ terrain_set_0/terrain_0/color = Color(0.987942, 0.986751, 0.983504, 1)
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_wowpa")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1l0tm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1us1"]
 texture = ExtResource("3_t1us1")
 16:11/0 = 0
 9:12/0 = 0
@@ -1138,7 +1138,7 @@ texture = ExtResource("3_t1us1")
 [sub_resource type="TileSet" id="TileSet_v158k"]
 physics_layer_0/collision_layer = 1
 navigation_layer_0/layers = 1
-sources/0 = SubResource("TileSetAtlasSource_1l0tm")
+sources/0 = SubResource("TileSetAtlasSource_t1us1")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsc44"]
 size = Vector2(60, 92)

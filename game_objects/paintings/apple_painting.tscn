@@ -11,9 +11,11 @@ script = ExtResource("1_evjd2")
 metadata/_custom_type_script = "uid://rccr0gsx3b37"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.5, -10.5)
 texture = ExtResource("2_b38xk")
 region_enabled = true
 region_rect = Rect2(354, 135, 29, 25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -10.5)
 shape = SubResource("RectangleShape2D_gfiay")
