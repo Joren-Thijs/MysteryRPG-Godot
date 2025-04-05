@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://cqsm6hu7oql5i" path="res://inventory/notes/poisoned_wine.tres" id="3_grjx3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grjx3"]
-size = Vector2(32, 62)
+size = Vector2(32, 59)
 
 [node name="Cabinet" type="StaticBody2D"]
 script = ExtResource("1_symo4")
@@ -19,5 +19,5 @@ region_enabled = true
 region_rect = Rect2(31.6783, 255.853, 31.7825, 63.9706)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -33)
+position = Vector2(0, -34.5)
 shape = SubResource("RectangleShape2D_grjx3")

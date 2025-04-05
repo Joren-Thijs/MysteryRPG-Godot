@@ -3092,7 +3092,7 @@ sources/0 = SubResource("TileSetAtlasSource_77bx4")
 sources/1 = SubResource("TileSetAtlasSource_2abkp")
 sources/2 = SubResource("TileSetAtlasSource_q3ery")
 
-[node name="VillaFisher" type="Node2D"]
+[node name="VillaFisherBottomFloor" type="Node2D"]
 script = ExtResource("1_y0ep0")
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -3226,6 +3226,12 @@ position = Vector2(-59, -72)
 [node name="PottedTree" parent="Y-sort/Bottom right room" instance=ExtResource("29_c2dem")]
 position = Vector2(150, -71)
 
+[node name="SmallTable" parent="Y-sort/Bottom right room" instance=ExtResource("24_0birb")]
+position = Vector2(30, 18)
+
+[node name="DrinkTable" parent="Y-sort/Bottom right room" instance=ExtResource("22_brio5")]
+position = Vector2(144, 129)
+
 [node name="Bottom left room" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
 position = Vector2(-435, 1075)
@@ -3306,7 +3312,7 @@ y_sort_enabled = true
 position = Vector2(57, 89)
 
 [node name="BigCouch" parent="Y-sort/Library" instance=ExtResource("23_1s7nk")]
-position = Vector2(-143, -19)
+position = Vector2(-146, -35)
 
 [node name="SmallTable" parent="Y-sort/Library" instance=ExtResource("24_0birb")]
 position = Vector2(-97, -18)
@@ -3349,8 +3355,21 @@ position = Vector2(143, -73)
 position = Vector2(633, -78)
 
 [node name="Pantry" type="Node2D" parent="Y-sort"]
+y_sort_enabled = true
 position = Vector2(-409, 73)
 
 [node name="PottedPlantWhite" parent="Y-sort/Pantry" instance=ExtResource("27_4ksgh")]
 y_sort_enabled = true
-position = Vector2(69, -50)
+position = Vector2(113, -53)
+
+[node name="Door" parent="Y-sort/Pantry" instance=ExtResource("6_8rpot")]
+position = Vector2(-43, -73)
+
+[node name="Pantry" parent="Y-sort/Pantry" instance=ExtResource("6_6afdj")]
+position = Vector2(-112, -89)
+
+[node name="Pantry2" parent="Y-sort/Pantry" instance=ExtResource("6_6afdj")]
+position = Vector2(22, -90)
+
+[node name="Cabinet" parent="Y-sort/Pantry" instance=ExtResource("6_8neva")]
+position = Vector2(73, -58)
