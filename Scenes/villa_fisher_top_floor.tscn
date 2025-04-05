@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://vpuobp1abswp"]
+[gd_scene load_steps=19 format=4 uid="uid://vpuobp1abswp"]
 
 [ext_resource type="Texture2D" uid="uid://bj1xtxyhgqlti" path="res://sprites/Tiles/Tiles1.png" id="1_u05mu"]
 [ext_resource type="Texture2D" uid="uid://b8if1l6fchwyh" path="res://sprites/Tiles/tiles2.png" id="2_07o5f"]
@@ -12,8 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://q7ey41b41g1v" path="res://game_objects/paintings/apple_painting.tscn" id="10_bh3sx"]
 [ext_resource type="PackedScene" uid="uid://c5727c15ji861" path="res://game_objects/furniture/cabinet.tscn" id="11_2nvqo"]
 [ext_resource type="PackedScene" uid="uid://c6fo8pb16msoo" path="res://game_objects/paintings/flower_painting.tscn" id="12_5cpup"]
+[ext_resource type="PackedScene" uid="uid://gghjxttmjbsw" path="res://game_objects/teleport/teleport_zone.tscn" id="13_10t1q"]
+[ext_resource type="PackedScene" uid="uid://bhcjkwrjy34mb" path="res://scenes/villa_fisher_bottom_floor.tscn" id="14_bu5ho"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_olmad"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6txp1"]
 texture = ExtResource("1_u05mu")
 0:0/0 = 0
 1:0/0 = 0
@@ -524,7 +526,7 @@ texture = ExtResource("1_u05mu")
 14:31/0 = 0
 15:31/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mdsm4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vs0sb"]
 texture = ExtResource("2_07o5f")
 0:0/0 = 0
 1:0/0 = 0
@@ -1848,7 +1850,7 @@ texture = ExtResource("2_07o5f")
 30:29/0 = 0
 31:29/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytqof"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tg5g8"]
 texture = ExtResource("3_10t1q")
 0:0/0 = 0
 1:0/0 = 0
@@ -3070,9 +3072,9 @@ terrain_set_0/terrain_2/name = "Carpet Brown"
 terrain_set_0/terrain_2/color = Color(1, 1, 1, 1)
 terrain_set_0/terrain_3/name = "Carpet gold"
 terrain_set_0/terrain_3/color = Color(1, 1, 1, 1)
-sources/0 = SubResource("TileSetAtlasSource_olmad")
-sources/1 = SubResource("TileSetAtlasSource_mdsm4")
-sources/2 = SubResource("TileSetAtlasSource_ytqof")
+sources/0 = SubResource("TileSetAtlasSource_6txp1")
+sources/1 = SubResource("TileSetAtlasSource_vs0sb")
+sources/2 = SubResource("TileSetAtlasSource_tg5g8")
 
 [node name="VillaFisherTopFloor" type="Node2D"]
 
@@ -3162,3 +3164,7 @@ position = Vector2(80, -92)
 
 [node name="FlowerPainting" parent="Y-sort/Bedroom 4" instance=ExtResource("12_5cpup")]
 position = Vector2(42, -125)
+
+[node name="TeleportZone" parent="Y-sort" instance=ExtResource("13_10t1q")]
+position = Vector2(34, -19)
+destination = ExtResource("14_bu5ho")
