@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://csevcbdry5ce6"]
+
+[ext_resource type="Script" uid="uid://rccr0gsx3b37" path="res://game_objects/game_object.gd" id="1_wr244"]
+[ext_resource type="Texture2D" uid="uid://b446r12bqs5k6" path="res://sprites/GameObjects/furniture3.png" id="2_x2jsy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0n23v"]
+size = Vector2(21, 19)
+
+[node name="PottedPlantWhite" type="StaticBody2D"]
+script = ExtResource("1_wr244")
+metadata/_custom_type_script = "uid://rccr0gsx3b37"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -27)
+texture = ExtResource("2_x2jsy")
+region_enabled = true
+region_rect = Rect2(481, 71, 30, 54)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -11.5)
+shape = SubResource("RectangleShape2D_0n23v")
