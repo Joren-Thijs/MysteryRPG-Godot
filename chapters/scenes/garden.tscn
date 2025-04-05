@@ -1,13 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://c3aiamgfihbja"]
+[gd_scene load_steps=13 format=4 uid="uid://c3aiamgfihbja"]
 
 [ext_resource type="Texture2D" uid="uid://bj1xtxyhgqlti" path="res://sprites/Tiles/Tiles1.png" id="1_jh4tr"]
 [ext_resource type="Texture2D" uid="uid://b8if1l6fchwyh" path="res://sprites/Tiles/tiles2.png" id="2_8d8dg"]
 [ext_resource type="Texture2D" uid="uid://c88a73o3nkaqo" path="res://sprites/Tiles/tiles3.png" id="3_4b0ur"]
 [ext_resource type="Texture2D" uid="uid://dd3wqhbvconjs" path="res://sprites/GameObjects/trees.png" id="4_8d8dg"]
-[ext_resource type="PackedScene" uid="uid://ymxp2tb5roub" path="res://scenes/player.tscn" id="4_bn3e0"]
+[ext_resource type="PackedScene" uid="uid://ymxp2tb5roub" path="res://chapters/scenes/player.tscn" id="4_bn3e0"]
 [ext_resource type="PackedScene" uid="uid://btnse7caomuuy" path="res://game_objects/door/door.tscn" id="5_1kdxx"]
-[ext_resource type="PackedScene" uid="uid://bhcjkwrjy34mb" path="res://scenes/villa_fisher_bottom_floor.tscn" id="7_bn3e0"]
-[ext_resource type="PackedScene" uid="uid://hpu2pagasaca" path="res://scenes/garden_shed.tscn" id="8_1kdxx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8d8dg"]
 texture = ExtResource("1_jh4tr")
@@ -3512,8 +3510,6 @@ position = Vector2(125, 207)
 
 [node name="HouseDoor" parent="Y-sort/GardenObjects" instance=ExtResource("5_1kdxx")]
 position = Vector2(205, -110)
-destination = ExtResource("7_bn3e0")
 
 [node name="ShedDoor" parent="Y-sort/GardenObjects" instance=ExtResource("5_1kdxx")]
 position = Vector2(-67, -125)
-destination = ExtResource("8_1kdxx")

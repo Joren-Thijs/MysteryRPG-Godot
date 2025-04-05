@@ -2,11 +2,11 @@ extends Node
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-const MAIN_MENU = preload("res://scenes/MainMenu.tscn")
-const FOREST_SCENE = preload("res://scenes/forest/forest_scene.tscn")
-const TOAST_SCENE = preload("res://scenes/toast/toast_scene.tscn")
-const VILLA_FISHER_TOP_FLOOR = preload("res://scenes/villa_fisher_top_floor.tscn")
-const GARDEN = preload("res://scenes/garden.tscn")
+const MAIN_MENU = preload("res://chapters/scenes/MainMenu.tscn")
+const FOREST_SCENE = preload("res://chapters/forest/forest_scene.tscn")
+const TOAST_SCENE = preload("res://chapters/toast/toast_scene.tscn")
+const VILLA_FISHER_TOP_FLOOR = preload("res://chapters/scenes/villa_fisher_top_floor.tscn")
+const GARDEN = preload("res://chapters/scenes/garden.tscn")
 
 
 enum Chapter {
