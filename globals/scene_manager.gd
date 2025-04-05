@@ -2,12 +2,10 @@ extends Node
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+# Chapters
 const MAIN_MENU = preload("res://chapters/scenes/MainMenu.tscn")
 const FOREST_SCENE = preload("res://chapters/forest/forest_scene.tscn")
 const TOAST_SCENE = preload("res://chapters/toast/toast_scene.tscn")
-const VILLA_FISHER_TOP_FLOOR = preload("res://chapters/scenes/villa_fisher_top_floor.tscn")
-const GARDEN = preload("res://chapters/scenes/garden.tscn")
-
 
 enum Chapter {
     MAIN_MENU,
@@ -23,12 +21,10 @@ func _ready():
     
 func load_first_chapter() -> void:
     load_new_scene(FOREST_SCENE)
-    animation_player.play("scene_fade_in")
-    await animation_player.animation_finished
+    fade_in()
 
 func load_new_chapter(chapter: Chapter) -> void:
-    animation_player.play("scene_fade_out")
-    await animation_player.animation_finished
+    fade_out()
     match chapter:
         Chapter.MAIN_MENU:
             load_new_scene(MAIN_MENU)
@@ -36,7 +32,14 @@ func load_new_chapter(chapter: Chapter) -> void:
             load_new_scene(FOREST_SCENE)
         Chapter.TOAST_SCENE:
             load_new_scene(TOAST_SCENE)
+    fade_in()
+
+func fade_in() -> void:
     animation_player.play("scene_fade_in")
+    await animation_player.animation_finished
+
+func fade_out() -> void:
+    animation_player.play("scene_fade_out")
     await animation_player.animation_finished
 
 func load_new_scene(scene: PackedScene) -> void:
