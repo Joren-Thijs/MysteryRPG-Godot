@@ -1,20 +1,22 @@
-class_name Player
-
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 const BASE_SPEED = 3000.0
 const SPRINT_SPEED = 5500
 const RAY_CAST_SIZE = 20
 var speed = 0
 var direction: Vector2 = Vector2.ZERO
-var dialogue_in_progress := false
+var dialogue_or_transition_in_progress := false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast
 
 func _ready() -> void:
-    DialogueManager.dialogue_started.connect(on_dialogue_started)
-    DialogueManager.dialogue_ended.connect(on_dialogue_ended)
+    DialogueManager.dialogue_started.connect(on_dialogue_or_transition_started)
+    DialogueManager.dialogue_ended.connect(on_dialogue_or_transition_ended)
+    SceneManager.fade_in_started.connect(on_dialogue_or_transition_started)
+    SceneManager.fade_in_finished.connect(on_dialogue_or_transition_ended)
+    SceneManager.fade_out_started.connect(on_dialogue_or_transition_started)
+    SceneManager.fade_out_finished.connect(on_dialogue_or_transition_ended)
 
 func _physics_process(delta: float) -> void:
     _get_movement()
@@ -39,8 +41,8 @@ func _handle_animation() -> void:
         animated_sprite.stop()
         
 func _get_movement() -> void:
-    if dialogue_in_progress or InventoryManager.is_open:
-        direction = Vector2.ZERO
+    if dialogue_or_transition_in_progress or InventoryManager.is_open:
+        speed = 0
         return
     
     if Input.is_action_pressed("sprint"):
@@ -60,15 +62,15 @@ func _get_movement() -> void:
         speed = 0
         
 func _input(event: InputEvent) -> void:
-    if event.is_action_pressed("interact") and ray_cast.is_colliding() and !dialogue_in_progress:
+    if event.is_action_pressed("interact") and ray_cast.is_colliding() and !dialogue_or_transition_in_progress:
         var body = ray_cast.get_collider()
         if body is Character:
             body.interact()
         if body is GameObject:
             body.interact()
             
-func on_dialogue_started(resource: DialogueResource) -> void:
-    dialogue_in_progress = true
+func on_dialogue_or_transition_started(resource: DialogueResource) -> void:
+    dialogue_or_transition_in_progress = true
 
-func on_dialogue_ended(resource: DialogueResource) -> void:
-    dialogue_in_progress = false
+func on_dialogue_or_transition_ended(resource: DialogueResource) -> void:
+    dialogue_or_transition_in_progress = false

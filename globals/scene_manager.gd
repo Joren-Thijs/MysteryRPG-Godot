@@ -2,6 +2,11 @@ extends Node
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+signal fade_in_started
+signal fade_in_finished
+signal fade_out_started
+signal fade_out_finished
+
 # Chapters
 const MAIN_MENU = preload("res://chapters/scenes/MainMenu.tscn")
 const FOREST_SCENE = preload("res://chapters/forest/forest_scene.tscn")
@@ -12,8 +17,6 @@ enum Chapter {
     FOREST_SCENE,
     TOAST_SCENE
 }
-
-var current_scene: Node = null
 
 func _ready():
     # Load the main menu scene when the game starts
@@ -35,12 +38,16 @@ func load_new_chapter(chapter: Chapter) -> void:
     fade_in()
 
 func fade_in() -> void:
+    fade_in_started.emit()
     animation_player.play("scene_fade_in")
     await animation_player.animation_finished
+    fade_in_finished.emit()
 
 func fade_out() -> void:
+    fade_out_started.emit()
     animation_player.play("scene_fade_out")
     await animation_player.animation_finished
+    fade_out_finished.emit()
 
 func load_new_scene(scene: PackedScene) -> void:
     # Use call_deferred to defer the scene transition to the next frame.
