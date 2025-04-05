@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=4 uid="uid://c3aiamgfihbja"]
+[gd_scene load_steps=14 format=4 uid="uid://c3aiamgfihbja"]
 
 [ext_resource type="Texture2D" uid="uid://bj1xtxyhgqlti" path="res://sprites/Tiles/Tiles1.png" id="1_jh4tr"]
+[ext_resource type="Script" uid="uid://chaj0em3q1nqj" path="res://chapters/scenes/garden.gd" id="1_ljmcq"]
 [ext_resource type="Texture2D" uid="uid://b8if1l6fchwyh" path="res://sprites/Tiles/tiles2.png" id="2_8d8dg"]
 [ext_resource type="Texture2D" uid="uid://c88a73o3nkaqo" path="res://sprites/Tiles/tiles3.png" id="3_4b0ur"]
 [ext_resource type="Texture2D" uid="uid://dd3wqhbvconjs" path="res://sprites/GameObjects/trees.png" id="4_8d8dg"]
 [ext_resource type="PackedScene" uid="uid://btnse7caomuuy" path="res://game_objects/door/door.tscn" id="5_1kdxx"]
+[ext_resource type="PackedScene" uid="uid://duh2b38duspe8" path="res://chapters/scenes/player_spawn_marker.tscn" id="7_2q70n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8d8dg"]
 texture = ExtResource("1_jh4tr")
@@ -3476,6 +3478,7 @@ navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_4b0ur")
 
 [node name="Garden" type="Node2D"]
+script = ExtResource("1_ljmcq")
 
 [node name="Background" type="TileMapLayer" parent="."]
 visible = false
@@ -3506,3 +3509,9 @@ position = Vector2(205, -110)
 
 [node name="ShedDoor" parent="Y-sort/GardenObjects" instance=ExtResource("5_1kdxx")]
 position = Vector2(-67, -125)
+
+[node name="HouseDoorMarker" parent="Y-sort/GardenObjects" instance=ExtResource("7_2q70n")]
+position = Vector2(203, -94)
+
+[node name="GardenShedDoorMarker" parent="Y-sort/GardenObjects" instance=ExtResource("7_2q70n")]
+position = Vector2(-65, -110)

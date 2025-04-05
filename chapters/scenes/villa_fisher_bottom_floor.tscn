@@ -3118,7 +3118,7 @@ position = Vector2(-405, 154)
 y_sort_enabled = true
 position = Vector2(113, -53)
 
-[node name="Door" parent="Y-sort/Pantry" instance=ExtResource("21_dakht")]
+[node name="BasementDoor" parent="Y-sort/Pantry" instance=ExtResource("21_dakht")]
 position = Vector2(-43, -72)
 
 [node name="Pantry" parent="Y-sort/Pantry" instance=ExtResource("6_khq2g")]
