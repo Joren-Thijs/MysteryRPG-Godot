@@ -47,6 +47,7 @@ func fade_out() -> void:
     fade_out_started.emit()
     animation_player.play("scene_fade_out")
     await animation_player.animation_finished
+    print("fade out finished")
     fade_out_finished.emit()
 
 func load_new_scene(scene: PackedScene) -> void:
