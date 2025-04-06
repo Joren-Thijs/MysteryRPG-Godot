@@ -3511,7 +3511,9 @@ position = Vector2(205, -110)
 position = Vector2(-67, -125)
 
 [node name="HouseDoorMarker" parent="Y-sort/GardenObjects" instance=ExtResource("7_2q70n")]
-position = Vector2(203, -94)
+position = Vector2(206, -94)
+is_door = true
 
 [node name="GardenShedDoorMarker" parent="Y-sort/GardenObjects" instance=ExtResource("7_2q70n")]
-position = Vector2(-65, -110)
+position = Vector2(-68, -110)
+is_door = true

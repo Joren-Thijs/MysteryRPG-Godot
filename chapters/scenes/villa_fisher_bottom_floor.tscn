@@ -3168,11 +3168,13 @@ position = Vector2(-503, -238)
 
 [node name="GardenDoorMarker" parent="Y-sort/Hallways" instance=ExtResource("16_trf3g")]
 y_sort_enabled = true
-position = Vector2(226, -12)
+position = Vector2(227, -12)
+is_door = true
 
 [node name="BasementDoorMarker" parent="Y-sort/Hallways" instance=ExtResource("16_trf3g")]
 y_sort_enabled = true
 position = Vector2(-759, -231)
+is_door = true
 
 [node name="Library" type="Node2D" parent="Y-sort"]
 y_sort_enabled = true
