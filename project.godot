@@ -13,7 +13,6 @@ config_version=5
 config/name="MysteryRPG"
 run/main_scene="uid://br0a8ba5doqwg"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
