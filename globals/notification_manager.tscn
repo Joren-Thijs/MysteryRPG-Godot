@@ -130,6 +130,7 @@ offset_bottom = 40.0
 grow_horizontal = 0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+mouse_filter = 2
 theme = ExtResource("1_xhb1x")
 
 [node name="MarginContainer" type="MarginContainer" parent="NotificationControl"]

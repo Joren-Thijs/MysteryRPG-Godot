@@ -1161,7 +1161,6 @@ tile_set = SubResource("TileSet_v158k")
 
 [node name="Player" parent="Y-sort" instance=ExtResource("4_g8nhd")]
 unique_name_in_owner = true
-y_sort_enabled = false
 position = Vector2(-699, -20)
 
 [node name="Jeffrey" parent="Y-sort" instance=ExtResource("5_rktga")]
